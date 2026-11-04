@@ -1,31 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "functions": {
-    "*.php": {
-      "runtime": "vercel-php@0.9.0",
-      "maxDuration": 30,
-      "excludeFiles": "{assets/**,attached_assets/**,css/**,documents/**,fonts/**,images/**,media/**,plugins/**,videos/**,walkthroughs/**}"
-    }
-  },
-  "rewrites": [
-    { "source": "/", "destination": "/index.php" },
-    { "source": "/about", "destination": "/about.php" },
-    { "source": "/services", "destination": "/services.php" },
-    { "source": "/projects", "destination": "/projects.php" },
-    { "source": "/contact", "destination": "/contact.php" },
-    { "source": "/joint-venture", "destination": "/joint-venture.php" },
-    { "source": "/social-media", "destination": "/social-media.php" },
-    { "source": "/project-detail", "destination": "/project-detail.php" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    }
-  ]
+  "framework": "container"
 }

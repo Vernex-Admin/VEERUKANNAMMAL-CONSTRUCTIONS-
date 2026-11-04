@@ -1,0 +1,20 @@
+{
+	auto_https off
+	admin off
+}
+
+:80 {
+	root * /app
+	encode zstd gzip
+
+	header {
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "SAMEORIGIN"
+		X-XSS-Protection "1; mode=block"
+	}
+
+	@cleanPages path_regexp cleanPages ^/([a-z0-9-]+)$
+	rewrite @cleanPages /{re.cleanPages.1}.php
+
+	php_server
+}
