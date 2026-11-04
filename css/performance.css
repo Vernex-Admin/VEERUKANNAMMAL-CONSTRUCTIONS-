@@ -1,0 +1,201 @@
+
+/* Performance Optimization Styles */
+
+/* Lazy loading placeholder */
+.lazy {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy.loaded {
+    opacity: 1;
+}
+
+/* Preload critical fonts */
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+    src: local('Poppins');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-display: swap;
+    src: local('Roboto');
+}
+
+/* Minimize layout shift */
+.owl-carousel {
+    min-height: 300px;
+}
+
+.testimonial-home {
+    min-height: 350px;
+}
+
+/* Critical CSS for above-the-fold content */
+.mt-bnr-inr {
+    min-height: 400px;
+    background-color: #f8f9fa;
+}
+
+/* Optimize carousel performance */
+.owl-carousel .owl-item {
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Reduce animation complexity on mobile */
+@media (max-width: 768px) {
+    .hover-animation-1,
+    .scale-in-center {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    /* Performance optimizations for mobile */
+    .owl-carousel {
+        min-height: 250px;
+    }
+    
+    .testimonial-home {
+        min-height: 280px;
+    }
+    
+    /* Reduce background attachment for better scrolling */
+    .bg-fixed {
+        background-attachment: scroll !important;
+    }
+    
+    /* Optimize video performance */
+    .video-wrapper iframe {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+    }
+    
+    /* Reduce box shadows for performance */
+    .box-shadow-heavy {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further mobile optimizations */
+    .owl-carousel {
+        min-height: 200px;
+    }
+    
+    .testimonial-home {
+        min-height: 220px;
+    }
+    
+    /* Minimize complex selectors for performance */
+    .complex-animation {
+        animation: none !important;
+        transform: none !important;
+    }
+    
+    /* Optimize floating video for small screens */
+    .floating-video-container {
+        will-change: transform;
+        transform: translateZ(0);
+    }
+}
+
+/* Critical responsive breakpoints */
+@media (max-width: 1440px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+/* Optimize images for different screen sizes */
+@media (max-width: 768px) {
+    img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+    
+    .img-responsive {
+        display: block;
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Prevent horizontal scroll */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+/* Optimize touch interactions */
+@media (hover: none) and (pointer: coarse) {
+    .hover-effect:hover {
+        transform: none;
+    }
+    
+    .btn:hover,
+    .site-button:hover {
+        transform: none;
+        box-shadow: inherit;
+    }
+}
+
+/* Improve loading performance */
+.preload {
+    visibility: hidden;
+}
+
+.loaded .preload {
+    visibility: visible;
+}
+
+/* Optimize carousel for touch devices */
+@media (max-width: 768px) {
+    .owl-carousel .owl-nav {
+        display: none;
+    }
+    
+    .owl-carousel .owl-dots {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .owl-carousel.touch-enabled {
+        touch-action: pan-y;
+        -webkit-overflow-scrolling: touch;
+    }
+}

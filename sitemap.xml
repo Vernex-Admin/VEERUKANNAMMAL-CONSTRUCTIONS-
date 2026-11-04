@@ -1,0 +1,170 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Homepage -->
+    <url>
+        <loc>https://veerukannammal.in/</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://veerukannammal.in/images/Veeru-Kannammal-Construction-Header-Logo.png</image:loc>
+            <image:title>Veeru Kannammal Construction - Best Builders Chennai</image:title>
+            <image:caption>Chennai's #1 Construction Company</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- About Page -->
+    <url>
+        <loc>https://veerukannammal.in/about</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Services Page -->
+    <url>
+        <loc>https://veerukannammal.in/services</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Projects Page -->
+    <url>
+        <loc>https://veerukannammal.in/projects</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Contact Page -->
+    <url>
+        <loc>https://veerukannammal.in/contact</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Joint Venture Page -->
+    <url>
+        <loc>https://veerukannammal.in/joint-venture</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- SEO Landing Pages -->
+    <url>
+        <loc>https://veerukannammal.in/residential-construction-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/commercial-construction-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/home-builders-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-contractors-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-packages-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-cost-calculator</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Location-based pages -->
+    <url>
+        <loc>https://veerukannammal.in/construction-medavakkam</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-velachery</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-omr</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/construction-pallikaranai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Service-specific pages -->
+    <url>
+        <loc>https://veerukannammal.in/house-construction-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/villa-construction-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/apartment-construction-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/renovation-services-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://veerukannammal.in/interior-design-chennai</loc>
+        <lastmod>2025-08-31</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>

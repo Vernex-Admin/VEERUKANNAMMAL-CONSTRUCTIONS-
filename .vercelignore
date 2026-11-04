@@ -1,0 +1,9 @@
+/.git/
+/.vercel/
+/vendor/
+/env.txt
+/.env
+/.env.*
+/debug-form.php
+/quick-test-form.php
+/Version/

@@ -1,0 +1,125 @@
+
+# Robots.txt for Veeru Kannammal Construction - Chennai's #1 Construction Company
+# Domain: veerukannammal.in
+
+User-agent: *
+Allow: /
+
+# Priority pages for crawling - High-value SEO pages
+Allow: /index.php
+Allow: /about.php
+Allow: /services.php
+Allow: /projects.php
+Allow: /contact.php
+Allow: /joint-venture.php
+
+# Allow SEO landing pages
+Allow: /residential-construction-chennai
+Allow: /commercial-construction-chennai
+Allow: /home-builders-chennai
+Allow: /construction-contractors-chennai
+Allow: /construction-packages-chennai
+Allow: /house-construction-chennai
+Allow: /villa-construction-chennai
+Allow: /construction-medavakkam
+Allow: /construction-velachery
+Allow: /construction-omr
+
+# Block sensitive directories and files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /phpmailer/
+Disallow: /.env
+Disallow: /env.txt
+Disallow: /error_log
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /tmp/
+Disallow: /cache/
+Disallow: /*?
+Disallow: /*#
+Disallow: /test-*
+Disallow: /debug-*
+Disallow: /form-submit-debug*
+
+# Allow important assets for better indexing
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Allow: /fonts/
+Allow: /assets/
+Allow: /attached_assets/
+
+# Block dynamic URLs and parameters
+Disallow: /*?*
+Disallow: /*&
+Disallow: /search?*
+Disallow: /*utm_*
+Disallow: /*ref=*
+
+# XML Sitemaps - Multiple sitemaps for better SEO
+Sitemap: https://veerukannammal.in/sitemap.xml
+Sitemap: https://veerukannammal.in/sitemap-images.xml
+Sitemap: https://veerukannammal.in/sitemap-videos.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Enhanced SEO directives for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots and scrapers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Cache directives
+User-agent: *
+Request-rate: 1/10s
+
+# Additional notes for webmasters:
+# This robots.txt is optimized for Veeru Kannammal Construction
+# Best Construction Company in Chennai
+# Contact: +91-93440-34068
+# Last updated: 2025-08-31

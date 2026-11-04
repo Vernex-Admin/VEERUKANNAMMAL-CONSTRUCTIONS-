@@ -1,0 +1,1125 @@
+.alura-feature-section {
+    position: relative;
+    padding: clamp(54px, 7vw, 96px) 0;
+    overflow: hidden;
+    background: #f7f5f0;
+    color: #26323a;
+}
+
+.alura-feature-section::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 5px;
+    background: linear-gradient(90deg, #074461, #c69a57 58%, #e8d3ad);
+    content: "";
+}
+
+.alura-feature-section > .container {
+    position: relative;
+    z-index: 1;
+}
+
+.alura-feature-lead {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(380px, .92fr);
+    align-items: center;
+    gap: clamp(36px, 6vw, 84px);
+}
+
+.alura-gallery {
+    display: grid;
+    min-width: 0;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.alura-gallery figure,
+.alura-floorplan-image {
+    margin: 0;
+}
+
+.alura-image-open {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background: #e4e1dc;
+}
+
+.alura-image-open-label {
+    position: absolute;
+    right: 9px;
+    bottom: 9px;
+    padding: 7px 9px;
+    border-radius: 2px;
+    background: rgba(8, 43, 60, .88);
+    color: #fff;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    transition: background-color 160ms ease;
+}
+
+.alura-image-open-label i {
+    margin-right: 4px;
+}
+
+.alura-image-open:hover .alura-image-open-label,
+.alura-image-open:focus-visible .alura-image-open-label {
+    background: #b78843;
+}
+
+.alura-image-open:focus-visible {
+    outline: 3px solid #d8b477;
+    outline-offset: -3px;
+}
+
+.alura-gallery-main {
+    grid-column: 1 / -1;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 5px;
+    background: #dedbd4;
+    box-shadow: 0 20px 52px rgba(25, 39, 47, .17);
+}
+
+.alura-gallery-main img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.69 / 1;
+    object-fit: cover;
+    transition: transform 350ms cubic-bezier(.2, .65, .3, 1);
+}
+
+.alura-gallery-main:hover img {
+    transform: scale(1.025);
+}
+
+.alura-gallery-main figcaption {
+    padding: 10px 13px;
+    background: #fff;
+    color: #52636c;
+    font-size: 12px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+}
+
+.alura-gallery-inset {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(18, 61, 86, .12);
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 8px 20px rgba(25, 39, 47, .09);
+}
+
+.alura-gallery-kitchen {
+    right: auto;
+    width: auto;
+}
+
+.alura-gallery-inset img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.25 / 1;
+    object-fit: cover;
+    transition: transform 450ms ease;
+}
+
+.alura-floorplan-image .alura-image-open {
+    max-height: inherit;
+}
+
+.alura-gallery-inset:hover img {
+    transform: scale(1.04);
+}
+
+.alura-gallery-inset figcaption {
+    padding: 9px 11px;
+    background: #fff;
+    color: #52636c;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.alura-project-intro {
+    min-width: 0;
+}
+
+.alura-eyebrow,
+.alura-card-kicker {
+    color: #93682e;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .14em;
+    line-height: 1.6;
+    text-transform: uppercase;
+}
+
+.alura-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 14px;
+}
+
+.alura-status-dot {
+    width: 8px;
+    height: 8px;
+    flex: 0 0 8px;
+    border-radius: 50%;
+    background: #c49a5b;
+    box-shadow: 0 0 0 4px rgba(196, 154, 91, .17);
+}
+
+.alura-project-intro h2 {
+    margin: 0 0 12px;
+    color: #123d56;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(38px, 4.2vw, 58px);
+    font-weight: 500;
+    letter-spacing: -.035em;
+    line-height: 1.04;
+}
+
+.alura-location {
+    margin: 0 0 5px;
+    color: #123d56;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.alura-location i {
+    margin-right: 6px;
+    color: #b78843;
+}
+
+.alura-address {
+    max-width: 490px;
+    margin: 0 0 20px;
+    color: #69747a;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.alura-summary {
+    max-width: 500px;
+    margin: 0 0 24px;
+    color: #34434b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.alura-highlights {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 0 26px;
+    border-top: 1px solid #d9d3c8;
+    border-bottom: 1px solid #d9d3c8;
+}
+
+.alura-highlight {
+    min-width: 0;
+    padding: 14px 10px 13px 0;
+}
+
+.alura-highlight + .alura-highlight {
+    padding-left: 13px;
+    border-left: 1px solid #d9d3c8;
+}
+
+.alura-highlight strong {
+    display: block;
+    color: #123d56;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(19px, 2vw, 26px);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+.alura-highlight span {
+    display: block;
+    margin-top: 6px;
+    color: #6d777b;
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+.alura-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 11px;
+}
+
+.alura-button {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border: 1px solid #123d56;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 1.25;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.alura-button-primary {
+    background: #123d56;
+    color: #fff;
+}
+
+.alura-button-secondary {
+    background: transparent;
+    color: #123d56;
+}
+
+.alura-button:hover,
+.alura-button:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(18, 61, 86, .17);
+    text-decoration: none;
+}
+
+.alura-button-primary:hover,
+.alura-button-primary:focus-visible {
+    border-color: #b78843;
+    background: #0b3045;
+    color: #fff;
+}
+
+.alura-button-secondary:hover,
+.alura-button-secondary:focus-visible {
+    border-color: #b78843;
+    background: #fff;
+    color: #123d56;
+}
+
+.alura-button:focus-visible {
+    outline: 3px solid #d8b477;
+    outline-offset: 3px;
+}
+
+.alura-walkthrough-dialog {
+    width: min(1320px, calc(100vw - 36px));
+    max-width: none;
+    height: min(90vh, 900px);
+    height: min(90dvh, 900px);
+    max-height: calc(100vh - 36px);
+    margin: auto;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 6px;
+    background: #0b1720;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .42);
+}
+
+.alura-walkthrough-dialog::backdrop {
+    background: rgba(7, 19, 27, .82);
+    backdrop-filter: blur(3px);
+}
+
+.alura-walkthrough-dialog-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.alura-walkthrough-dialog-header,
+.alura-walkthrough-dialog-footer {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 14px 20px;
+    background: #fff;
+}
+
+.alura-walkthrough-dialog-header {
+    border-bottom: 1px solid #e3e5e5;
+}
+
+.alura-walkthrough-dialog-header h2 {
+    margin: 3px 0 0;
+    color: #123d56;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.alura-walkthrough-close {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border: 1px solid #d8dddf;
+    border-radius: 50%;
+    background: #fff;
+    color: #123d56;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.alura-walkthrough-close:hover,
+.alura-walkthrough-close:focus-visible {
+    border-color: #123d56;
+    background: #123d56;
+    color: #fff;
+}
+
+.alura-walkthrough-viewport {
+    position: relative;
+    min-height: 0;
+    flex: 1 1 auto;
+    overflow: hidden;
+    background: #0b1720;
+}
+
+.alura-walkthrough-viewport iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #0b1720;
+}
+
+.alura-room-selector {
+    flex: 0 0 auto;
+    padding: 9px 16px 11px;
+    border-top: 1px solid #e3e5e5;
+    background: #fff;
+}
+
+.alura-room-selector-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+    color: #123d56;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.alura-room-selector-count {
+    color: #75828a;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .03em;
+    text-transform: none;
+}
+
+.alura-room-selector-navigation {
+    display: flex;
+    min-width: 0;
+    align-items: center;
+    gap: 6px;
+}
+
+.alura-room-selector-step {
+    display: none;
+}
+
+.alura-room-selector-options {
+    display: flex;
+    min-width: 0;
+    flex: 1 1 auto;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: x proximity;
+    scrollbar-color: #9aaab1 #eef0f1;
+    scrollbar-width: thin;
+    gap: 6px;
+    padding: 1px 2px 7px;
+}
+
+.alura-room-selector-options button {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex: 0 0 98px;
+    flex-direction: column;
+    gap: 4px;
+    padding: 4px;
+    border: 1px solid #dce2e4;
+    border-radius: 3px;
+    background: #f7f8f8;
+    color: #34505e;
+    cursor: pointer;
+    font: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.alura-room-selector-options img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 2px;
+    background: #e4e1dc;
+    object-fit: cover;
+}
+
+.alura-room-selector-options button span {
+    display: -webkit-box;
+    min-height: 24px;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    align-content: center;
+}
+
+.alura-room-selector-options button:hover:not(:disabled),
+.alura-room-selector-options button:focus-visible {
+    transform: translateY(-1px);
+    border-color: #b78843;
+    background: #123d56;
+    color: #fff;
+}
+
+.alura-room-selector-options button:focus-visible {
+    outline: 2px solid #d8b477;
+    outline-offset: 2px;
+}
+
+.alura-room-selector-options button.is-current {
+    border-color: #b78843;
+    box-shadow: 0 0 0 1px rgba(183, 136, 67, .22);
+}
+
+.alura-room-selector-options button:disabled {
+    cursor: wait;
+    opacity: .58;
+}
+
+.alura-walkthrough-status {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+    z-index: 2;
+    width: fit-content;
+    max-width: calc(100% - 28px);
+    margin: 0;
+    padding: 9px 13px;
+    border-radius: 3px;
+    background: rgba(7, 34, 49, .91);
+    color: #fff;
+    font-size: 12px;
+    line-height: 1.45;
+    transition: opacity 240ms ease;
+}
+
+.alura-walkthrough-status.is-ready {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.alura-walkthrough-status[hidden],
+.alura-walkthrough-error[hidden] {
+    display: none !important;
+}
+
+.alura-walkthrough-error {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    align-content: center;
+    justify-items: center;
+    gap: 14px;
+    padding: 24px;
+    background: rgba(8, 26, 37, .94);
+    color: #fff;
+    text-align: center;
+}
+
+.alura-walkthrough-error p {
+    max-width: 460px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+.alura-walkthrough-error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.alura-walkthrough-error-actions .alura-button {
+    min-height: 42px;
+}
+
+.alura-walkthrough-dialog-footer {
+    justify-content: flex-start;
+    border-top: 1px solid #e3e5e5;
+}
+
+.alura-walkthrough-dialog-footer p {
+    margin: 0;
+    color: #65727a;
+    font-size: 12px;
+}
+
+.alura-information-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: clamp(50px, 7vw, 84px);
+    scroll-margin-top: 110px;
+}
+
+.alura-information-card {
+    min-width: 0;
+    padding: clamp(22px, 3vw, 32px);
+    border: 1px solid rgba(17, 61, 86, .1);
+    background: rgba(255, 255, 255, .72);
+    box-shadow: 0 8px 24px rgba(20, 40, 50, .045);
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.alura-information-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(183, 136, 67, .42);
+    box-shadow: 0 14px 30px rgba(20, 40, 50, .09);
+}
+
+.alura-information-card h3,
+.alura-floorplan-copy h3 {
+    margin: 8px 0 17px;
+    color: #123d56;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.alura-information-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.alura-information-card li {
+    position: relative;
+    margin: 0;
+    padding: 9px 0 9px 18px;
+    border-top: 1px solid rgba(20, 40, 50, .09);
+    color: #58656b;
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+.alura-information-card li::before {
+    position: absolute;
+    top: 17px;
+    left: 1px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #ba8c4b;
+    content: "";
+}
+
+.alura-landmark-list li {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.alura-landmark-list li strong {
+    flex: 0 0 auto;
+    color: #123d56;
+    font-weight: 600;
+}
+
+.alura-information-card .alura-landmark-note {
+    margin: 13px 0 0;
+    color: #778187;
+    font-size: 11px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.alura-floorplan-card {
+    display: grid;
+    grid-template-columns: minmax(220px, .65fr) minmax(0, 1.35fr);
+    align-items: center;
+    gap: clamp(24px, 5vw, 64px);
+    margin-top: 22px;
+    padding: clamp(22px, 4vw, 46px);
+    background: #123d56;
+    color: rgba(255, 255, 255, .84);
+}
+
+.alura-floorplan-copy h3 {
+    margin-top: 10px;
+    color: #fff;
+    font-size: clamp(28px, 3vw, 38px);
+}
+
+.alura-floorplan-copy p {
+    margin: 0 0 12px;
+    color: rgba(255, 255, 255, .8);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.alura-floorplan-copy .alura-plan-note {
+    color: #e4c998;
+    font-size: 11px;
+}
+
+.alura-floorplan-image {
+    max-height: 530px;
+    overflow: hidden;
+    background: #c9c7c2;
+}
+
+.alura-floorplan-image img {
+    display: block;
+    width: 100%;
+    max-height: 530px;
+    object-fit: contain;
+}
+
+.alura-inclusions {
+    max-width: 890px;
+    margin: 17px auto 0;
+    color: #69747a;
+    font-size: 11px;
+    line-height: 1.65;
+    text-align: center;
+}
+
+.alura-brochure-dialog {
+    width: min(1120px, calc(100vw - 32px));
+    max-width: none;
+    height: min(92vh, 920px);
+    height: min(92dvh, 920px);
+    max-height: 92vh;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, .35);
+}
+
+.alura-brochure-dialog::backdrop {
+    background: rgba(10, 24, 32, .76);
+    backdrop-filter: blur(3px);
+}
+
+.alura-brochure-dialog-content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.alura-brochure-dialog-header,
+.alura-brochure-dialog-footer {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 20px;
+}
+
+.alura-brochure-dialog-header {
+    border-bottom: 1px solid #e3e5e5;
+}
+
+.alura-brochure-dialog-header h2 {
+    margin: 3px 0 0;
+    color: #123d56;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.alura-brochure-close {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    place-items: center;
+    border: 1px solid #d8dddf;
+    border-radius: 50%;
+    background: #fff;
+    color: #123d56;
+    cursor: pointer;
+    font-size: 30px;
+    line-height: 1;
+}
+
+.alura-brochure-close:hover,
+.alura-brochure-close:focus-visible {
+    border-color: #123d56;
+    background: #123d56;
+    color: #fff;
+}
+
+.alura-brochure-viewer {
+    min-height: 0;
+    flex: 1 1 auto;
+    background: #dfe2e4;
+}
+
+.alura-brochure-viewer iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #dfe2e4;
+}
+
+.alura-brochure-dialog-footer {
+    border-top: 1px solid #e3e5e5;
+    background: #fff;
+}
+
+.alura-brochure-dialog-footer p {
+    margin: 0;
+    color: #65727a;
+    font-size: 12px;
+}
+
+@media (max-width: 767px) {
+    .alura-gallery {
+        gap: 8px;
+    }
+
+    .alura-brochure-dialog {
+        width: calc(100vw - 16px);
+        height: calc(100dvh - 16px);
+        max-height: calc(100vh - 16px);
+        margin: auto;
+        border-radius: 4px;
+    }
+
+    .alura-brochure-dialog-header,
+    .alura-brochure-dialog-footer {
+        padding: 12px;
+    }
+
+    .alura-brochure-dialog-footer {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 9px;
+    }
+
+    .alura-walkthrough-dialog {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .alura-walkthrough-dialog-header,
+    .alura-walkthrough-dialog-footer {
+        padding: 11px 13px;
+    }
+
+    .alura-walkthrough-dialog-header h2 {
+        font-size: 20px;
+    }
+
+    .alura-walkthrough-error-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .alura-walkthrough-error-actions .alura-button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 991px) {
+    .alura-feature-lead {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, .95fr);
+        gap: 30px;
+    }
+
+    .alura-information-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .alura-location-card {
+        grid-column: 1 / -1;
+    }
+
+    .alura-location-card ul {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 24px;
+    }
+}
+
+@media (max-width: 767px) {
+    .alura-feature-section {
+        padding: 132px 0 54px;
+    }
+
+    .alura-feature-lead {
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .alura-gallery {
+        order: 0;
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .alura-gallery-inset {
+        display: none;
+    }
+
+    .alura-gallery-main {
+        width: min(100%, 340px);
+        margin-inline: auto;
+    }
+
+    .alura-project-intro {
+        order: 1;
+    }
+
+    .alura-eyebrow {
+        align-items: flex-start;
+        font-size: 10px;
+        letter-spacing: .08em;
+    }
+
+    .alura-status-dot {
+        margin-top: 4px;
+    }
+
+    .alura-project-intro h2 {
+        font-size: clamp(38px, 11vw, 52px);
+    }
+
+    .alura-summary {
+        font-size: 18px;
+    }
+
+    .alura-highlights {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .alura-highlight:nth-child(3) {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    .alura-highlight:nth-child(n+3) {
+        border-top: 1px solid #d9d3c8;
+    }
+
+    .alura-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .alura-button {
+        width: 100%;
+    }
+
+    .alura-information-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+        margin-top: 46px;
+    }
+
+    .alura-location-card {
+        grid-column: auto;
+    }
+
+    .alura-location-card ul {
+        display: block;
+    }
+
+    .alura-floorplan-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+        margin-top: 14px;
+        padding: 24px 18px;
+    }
+
+    .alura-floorplan-image,
+    .alura-floorplan-image img {
+        max-height: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .alura-gallery-main img,
+    .alura-gallery-inset img,
+    .alura-button,
+    .alura-information-card,
+    .alura-walkthrough-status {
+        transition: none;
+    }
+
+    .alura-gallery-main:hover img,
+    .alura-gallery-inset:hover img,
+    .alura-button:hover,
+    .alura-button:focus-visible,
+    .alura-information-card:hover {
+        transform: none;
+    }
+
+    .alura-walkthrough-status.is-ready {
+        opacity: 1;
+    }
+
+    .alura-room-selector-options button {
+        transition: none;
+    }
+
+    .alura-room-selector-options button:hover:not(:disabled),
+    .alura-room-selector-options button:focus-visible {
+        transform: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .alura-room-selector-options {
+        scrollbar-width: thin;
+    }
+}
+
+@media (max-width: 767px) {
+    .alura-walkthrough-dialog-header {
+        gap: 8px;
+    }
+
+    .alura-walkthrough-dialog-header .alura-card-kicker {
+        font-size: 10px;
+    }
+
+    .alura-room-selector {
+        padding: 8px 10px 10px;
+    }
+
+    .alura-room-selector-heading {
+        margin-bottom: 6px;
+    }
+
+    .alura-room-selector-navigation {
+        gap: 5px;
+    }
+
+    .alura-room-selector-step {
+        display: grid;
+        width: 38px;
+        height: 48px;
+        flex: 0 0 38px;
+        place-items: center;
+        border: 1px solid #dce2e4;
+        border-radius: 3px;
+        background: #f7f8f8;
+        color: #123d56;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+    }
+
+    .alura-room-selector-step:hover:not(:disabled),
+    .alura-room-selector-step:focus-visible {
+        border-color: #b78843;
+        background: #123d56;
+        color: #fff;
+    }
+
+    .alura-room-selector-step:focus-visible {
+        outline: 2px solid #d8b477;
+        outline-offset: 2px;
+    }
+
+    .alura-room-selector-step:disabled {
+        cursor: default;
+        opacity: .38;
+    }
+
+    .alura-room-selector-options {
+        gap: 5px;
+    }
+
+    .alura-room-selector-options button {
+        flex-basis: 92px;
+        padding: 4px;
+        font-size: 10px;
+    }
+
+    .alura-walkthrough-dialog-footer {
+        display: none;
+    }
+}
+
+@media (max-width: 360px) {
+    .alura-room-selector-options button {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .alura-gallery-main > .alura-image-open {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1141 / 676;
+    }
+
+    .alura-gallery-main > .alura-image-open > img {
+        width: 100%;
+        height: 100%;
+        max-height: none;
+        aspect-ratio: 1141 / 676;
+        object-fit: contain;
+        object-position: right top;
+    }
+
+    .alura-gallery-main:hover img,
+    .alura-gallery-inset:hover img {
+        transform: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .alura-room-selector-step {
+        transition: none;
+    }
+}

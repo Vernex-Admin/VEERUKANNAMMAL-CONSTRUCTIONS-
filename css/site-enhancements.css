@@ -1,0 +1,609 @@
+/* Lightweight interaction and accessibility improvements */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 96px;
+}
+
+/* =============================================
+   PAGE TRANSITION — prevent flicker & layout jumps
+   ============================================= */
+body {
+    /* Prevent FOUC / white flash on navigation */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth page entrance — avoids sudden layout jump */
+.page-content {
+    animation: vk-page-in 220ms ease-out both;
+}
+
+@keyframes vk-page-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* =============================================
+   HEADER — prevent flicker & layout shift
+   ============================================= */
+.site-header {
+    /* Prevent height collapse during load */
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.sticky-header {
+    /* Smooth sticky transition instead of jumping */
+    transition: box-shadow 200ms ease;
+}
+
+.sticky-header.is-fixed {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* Nav links — smooth, no flicker */
+.header-nav .nav > li > a {
+    position: relative;
+    transition: color 160ms ease !important;
+}
+
+/* Active page indicator underline */
+.header-nav .nav > li.active > a {
+    color: #074461;
+    font-weight: 600;
+}
+
+.header-nav .nav > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background: #074461;
+    transition: left 160ms ease, right 160ms ease;
+}
+
+.header-nav .nav > li.active > a::after,
+.header-nav .nav > li > a:hover::after {
+    left: 0;
+    right: 0;
+}
+
+/* Mobile nav — smooth slide in/out */
+@media (max-width: 767px) {
+    .header-nav {
+        /* Prevent flicker when toggling */
+        transform: translateZ(0);
+        transition: none; /* Let the collapse handle it */
+    }
+
+    .mobile-sider-drawer-menu .header-nav {
+        /* Start hidden, no flash */
+        display: none;
+        visibility: visible;
+    }
+
+    .mobile-sider-drawer-menu.active .header-nav {
+        display: block;
+        animation: vk-nav-drop 180ms ease-out both;
+    }
+
+    @keyframes vk-nav-drop {
+        from { opacity: 0; transform: translateY(-8px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hamburger icon smooth transition */
+    .navbar-toggler .icon-bar {
+        transition: transform 200ms ease, opacity 200ms ease !important;
+    }
+
+    .mobile-sider-drawer-menu.active .icon-bar-first {
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile-sider-drawer-menu.active .icon-bar-two {
+        opacity: 0;
+    }
+
+    .mobile-sider-drawer-menu.active .icon-bar-three {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+}
+
+/* =============================================
+   FOOTER — prevent layout shift
+   ============================================= */
+.site-footer {
+    /* Prevent reflow from footer_fixed() JS */
+    transform: translateZ(0);
+}
+
+/* Footer links smooth hover */
+.site-footer a {
+    transition: color 160ms ease, opacity 160ms ease;
+}
+
+/* Social icons smooth hover */
+.social-icons li a {
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease !important;
+    display: inline-block;
+}
+
+.social-icons li a:hover {
+    transform: translateY(-2px);
+}
+
+/* =============================================
+   SCROLL-TO-TOP BUTTON — smooth fade
+   ============================================= */
+button.scroltop {
+    transition: opacity 300ms ease, transform 300ms ease !important;
+}
+
+/* =============================================
+   FLOATING WHATSAPP BUTTON (Global, Accessible, Responsive)
+   ============================================= */
+#vk-whatsapp-float,
+.vk-whatsapp-float {
+    position: fixed !important;
+    bottom: 24px !important;
+    right: 20px !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 50% !important;
+    background-color: #25D366 !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.2) !important;
+    animation: vk-wa-enter 300ms ease-out both !important;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease !important;
+    cursor: pointer !important;
+}
+
+#vk-whatsapp-float:hover,
+#vk-whatsapp-float:focus-visible,
+.vk-whatsapp-float:hover,
+.vk-whatsapp-float:focus-visible {
+    background-color: #1ebe5d !important;
+    transform: scale(1.08) !important;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55), 0 3px 8px rgba(0,0,0,0.25) !important;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    outline: none !important;
+}
+
+#vk-whatsapp-float:focus-visible,
+.vk-whatsapp-float:focus-visible {
+    outline: 3px solid #25D366 !important;
+    outline-offset: 3px !important;
+}
+
+#vk-whatsapp-float svg,
+.vk-whatsapp-float svg {
+    width: 26px !important;
+    height: 26px !important;
+    fill: #ffffff !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+/* Subtle, gentle entrance animation */
+@keyframes vk-wa-enter {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Mobile sizing (44px touch target) & safe area spacing */
+@media (max-width: 767px) {
+    #vk-whatsapp-float,
+    .vk-whatsapp-float {
+        width: 44px !important;
+        height: 44px !important;
+        bottom: 18px !important;
+        right: 16px !important;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    #vk-whatsapp-float svg,
+    .vk-whatsapp-float svg {
+        width: 23px !important;
+        height: 23px !important;
+    }
+}
+
+/* Make sure the scroll-to-top button doesn't collide with the WhatsApp button */
+button.scroltop {
+    bottom: 84px !important;
+    right: 20px !important;
+}
+
+@media (max-width: 767px) {
+    button.scroltop {
+        bottom: 74px !important;
+        right: 16px !important;
+    }
+}
+
+.site-button,
+.modern-submit-btn,
+.testimonial-card,
+.work-box,
+.service-box,
+.mt-icon-box-wraper {
+    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
+        box-shadow 180ms ease, transform 180ms ease;
+}
+
+.header-nav .nav > li > a:hover,
+.header-nav .nav > li > a:focus-visible {
+    color: #074461;
+}
+
+.site-button:hover,
+.site-button:focus-visible,
+.modern-submit-btn:hover,
+.modern-submit-btn:focus-visible {
+    transform: translateY(-2px);
+}
+
+.testimonial-card:hover,
+.work-box:hover,
+.service-box:hover,
+.mt-icon-box-wraper:hover {
+    transform: translateY(-3px);
+}
+
+@media (hover: none) {
+    .site-button:hover,
+    .testimonial-card:hover,
+    .work-box:hover,
+    .service-box:hover,
+    .mt-icon-box-wraper:hover {
+        transform: none;
+    }
+}
+
+.floating-video-container1 {
+    overflow: hidden;
+    background: #202a30;
+}
+
+.floating-video-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-form .loading-area {
+    position: static;
+    z-index: auto;
+    height: auto;
+    overflow: visible;
+    color: #074461;
+}
+
+/* Keep the testimonial carousel intact while showing lightweight, lazy previews. */
+.testimonials-carousel .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 9 / 16;
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #111820;
+}
+
+.testimonials-carousel .video-wrapper {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    border-radius: inherit;
+    background: #111820;
+}
+
+.testimonials-carousel .video-bg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(14px) brightness(.55);
+    transform: scale(1.08);
+}
+
+.testimonials-carousel .video-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    background: transparent;
+}
+
+.testimonials-carousel .testimonial-play-button {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: #111820;
+    cursor: pointer;
+}
+
+.testimonials-carousel .testimonial-play-button[hidden] {
+    display: none !important;
+}
+
+.testimonials-carousel .testimonial-poster {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.testimonials-carousel .testimonial-play-icon {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    padding-left: 4px;
+    border: 2px solid rgba(255,255,255,.9);
+    border-radius: 50%;
+    background: rgba(7,68,97,.92);
+    color: #fff;
+    font-size: 22px;
+    box-shadow: 0 5px 22px rgba(0,0,0,.3);
+    transition: transform 180ms ease, background-color 180ms ease;
+}
+
+.testimonials-carousel .testimonial-play-button:hover .testimonial-play-icon,
+.testimonials-carousel .testimonial-play-button:focus-visible .testimonial-play-icon {
+    transform: scale(1.08);
+    background: #0c6fa6;
+}
+
+.testimonials-carousel .testimonial-youtube-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 4;
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(255,255,255,.65);
+    border-radius: 50%;
+    background: rgba(0,0,0,.65);
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+}
+
+.testimonials-carousel .testimonial-youtube-link:hover,
+.testimonials-carousel .testimonial-youtube-link:focus-visible {
+    background: #c4302b;
+    color: #fff;
+}
+
+.testimonials-carousel .testimonial-play-button:focus-visible,
+.testimonials-carousel .testimonial-youtube-link:focus-visible {
+    outline: 3px solid #f5be23;
+    outline-offset: 3px;
+}
+
+.testimonials-carousel .testimonial-card:hover {
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.testimonials-carousel .owl-nav {
+    display: block !important;
+    text-align: center;
+}
+
+.testimonials-carousel .owl-nav button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-carousel .video-wrapper.loading::before {
+    z-index: 5;
+}
+
+.contact-response-note {
+    margin: 6px 0 18px;
+    color: #074461;
+    font-weight: 600;
+}
+
+.form-submit-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.form-submit-wrapper > .modern-submit-btn,
+.form-submit-wrapper > .whatsapp-contact-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 305px;
+    max-width: 100%;
+    min-width: 0;
+    height: 68px;
+    margin: 0 !important;
+    padding: 0 18px;
+    border: 0;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #022d40, #074461, #0c6fa6);
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.form-submit-wrapper > .modern-submit-btn:hover,
+.form-submit-wrapper > .modern-submit-btn:focus-visible,
+.form-submit-wrapper > .whatsapp-contact-button:hover,
+.form-submit-wrapper > .whatsapp-contact-button:focus-visible {
+    background: linear-gradient(135deg, #0c6fa6, #074461, #022d40);
+    color: #fff;
+}
+
+.form-submit-wrapper > .modern-submit-btn i,
+.form-submit-wrapper > .whatsapp-contact-button i {
+    margin-left: 10px;
+}
+
+.motion-ready .page-content .section-head,
+.motion-ready .page-content .section-content > .row,
+.motion-ready .page-content .pricing-comparison-table,
+.motion-ready .page-content .work-carousel-outer,
+.motion-ready .page-content .alura-feature-lead,
+.motion-ready .page-content .alura-information-card,
+.motion-ready .page-content .alura-floorplan-card {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 220ms ease-out, transform 220ms ease-out;
+}
+
+.motion-ready .page-content .section-head.is-visible,
+.motion-ready .page-content .section-content > .row.is-visible,
+.motion-ready .page-content .pricing-comparison-table.is-visible,
+.motion-ready .page-content .work-carousel-outer.is-visible,
+.motion-ready .page-content .alura-feature-lead.is-visible,
+.motion-ready .page-content .alura-information-card.is-visible,
+.motion-ready .page-content .alura-floorplan-card.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+@media (max-width: 767px) {
+    html {
+        scroll-padding-top: 76px;
+    }
+
+    .form-submit-wrapper {
+        flex-direction: column;
+    }
+
+    .form-submit-wrapper > .modern-submit-btn,
+    .form-submit-wrapper > .whatsapp-contact-button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .floating-video-container1 {
+        aspect-ratio: 16 / 9;
+        top: 0;
+        margin-top: 24px;
+        margin-bottom: 42px !important;
+    }
+
+    .mt-bnr-inr-entry {
+        width: 100% !important;
+        max-width: 100%;
+    }
+
+    .section-full .row > .col-lg-8.col-md-12,
+    .section-full .row > .col-lg-4.col-md-12 {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        padding: 0 !important;
+    }
+
+    .contact-one,
+    .contact-one-inner,
+    .modern-form-container {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        margin: 0 !important;
+        box-sizing: border-box;
+    }
+
+    .contact-form .form-row,
+    .contact-form .form-group,
+    .contact-form .form-control,
+    .contact-form .form-submit-wrapper {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .modern-form-container {
+        padding: 18px !important;
+    }
+
+    .contact-subtitle {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .testimonials-carousel .video-container {
+        max-width: min(100%, 360px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

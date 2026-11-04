@@ -1,0 +1,23 @@
+{
+    "name": "Veeru Kannammal Construction",
+    "short_name": "VK Construction",
+    "description": "Leading construction company in Chennai specializing in residential and commercial construction, renovation, and interior design services.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#074461",
+    "icons": [
+        {
+            "src": "images/vk-favicon.png?v=2",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "images/vk-favicon.png?v=2",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
