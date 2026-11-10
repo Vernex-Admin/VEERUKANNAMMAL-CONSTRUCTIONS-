@@ -4,29 +4,24 @@
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     /* =============================================
-       SECTION ENTRANCE ANIMATIONS
+       HEADER — reserve its height so the page never jumps
        ============================================= */
-    function enableSectionEntrances() {
-        if (motionPreference.matches || !('IntersectionObserver' in window)) return;
-
-        const targets = document.querySelectorAll(
-            '.page-content .section-head, .page-content .section-content > .row, ' +
-            '.page-content .pricing-comparison-table, .page-content .work-carousel-outer, ' +
-            '.page-content .alura-feature-lead, .page-content .alura-information-card, .page-content .alura-floorplan-card'
-        );
-        if (!targets.length) return;
-
-        document.documentElement.classList.add('motion-ready');
-        const observer = new IntersectionObserver((entries, activeObserver) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    activeObserver.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '0px 0px -32px 0px', threshold: 0.04 });
-
-        targets.forEach((target) => observer.observe(target));
+    /* Sections are no longer hidden until they scroll into view (that caused flicker). */
+    function reserveHeaderSpace() {
+        const bar = document.querySelector('.site-header .sticky-header .main-bar');
+        if (!bar) return;
+        const root = document.documentElement;
+        let last = 0;
+        const measure = () => {
+            const height = Math.round(bar.getBoundingClientRect().height);
+            if (height > 0 && height !== last) {
+                last = height;
+                root.style.setProperty('--vk-header-h', height + 'px');
+            }
+        };
+        measure();
+        if ('ResizeObserver' in window) new ResizeObserver(measure).observe(bar);
+        else window.addEventListener('resize', measure, { passive: true });
     }
 
     /* =============================================
@@ -446,7 +441,7 @@
        MAIN INIT
        ============================================= */
     function initialize() {
-        enableSectionEntrances();
+        reserveHeaderSpace();
         initializeTestimonialVideos();
         initializeAluraWalkthrough();
         initializeAluraBrochure();
@@ -458,13 +453,7 @@
 
         if (motionPreference.addEventListener) {
             motionPreference.addEventListener('change', (event) => {
-                if (event.matches) {
-                    stopAutomaticCarouselMotion();
-                    document.documentElement.classList.remove('motion-ready');
-                    document.querySelectorAll('.is-visible').forEach((target) => target.classList.remove('is-visible'));
-                } else {
-                    enableSectionEntrances();
-                }
+                if (event.matches) stopAutomaticCarouselMotion();
             });
         }
     }

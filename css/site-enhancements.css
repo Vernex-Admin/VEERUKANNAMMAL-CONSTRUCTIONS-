@@ -13,24 +13,19 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth page entrance — avoids sudden layout jump */
-.page-content {
-    animation: vk-page-in 220ms ease-out both;
-}
-
-@keyframes vk-page-in {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
+/* (Removed the .page-content fade-in: it hid every page for a moment on each navigation.) */
 
 /* =============================================
-   HEADER — prevent flicker & layout shift
+   HEADER — sticky without layout jumps
    ============================================= */
-.site-header {
-    /* Prevent height collapse during load */
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+/* No transform / will-change on .site-header: either one turns it into the containing
+   block for the position:fixed .main-bar, so the "sticky" bar scrolled away with the page. */
+
+/* Reserve the header's space so content never jumps when the bar turns fixed.
+   style.css forces .sticky-wrapper { height: auto !important }, which collapsed the
+   placeholder to 0. site-enhancements.js keeps --vk-header-h equal to the bar's height. */
+.site-header .sticky-wrapper {
+    min-height: var(--vk-header-h, 95px);
 }
 
 .sticky-header {
@@ -495,28 +490,7 @@ button.scroltop {
     margin-left: 10px;
 }
 
-.motion-ready .page-content .section-head,
-.motion-ready .page-content .section-content > .row,
-.motion-ready .page-content .pricing-comparison-table,
-.motion-ready .page-content .work-carousel-outer,
-.motion-ready .page-content .alura-feature-lead,
-.motion-ready .page-content .alura-information-card,
-.motion-ready .page-content .alura-floorplan-card {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 220ms ease-out, transform 220ms ease-out;
-}
-
-.motion-ready .page-content .section-head.is-visible,
-.motion-ready .page-content .section-content > .row.is-visible,
-.motion-ready .page-content .pricing-comparison-table.is-visible,
-.motion-ready .page-content .work-carousel-outer.is-visible,
-.motion-ready .page-content .alura-feature-lead.is-visible,
-.motion-ready .page-content .alura-information-card.is-visible,
-.motion-ready .page-content .alura-floorplan-card.is-visible {
-    opacity: 1;
-    transform: none;
-}
+/* (Removed the scroll-in section animations: sections were hidden until they scrolled into view.) */
 
 @media (max-width: 767px) {
     html {
