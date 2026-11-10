@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php $pageCss = []; include __DIR__ . '/append/head.php'; ?>
+    <?php $pageCss = ['css/magnific-popup.min.css']; include __DIR__ . '/append/head.php'; ?>
 
     <meta name="keywords" content="" />
     <meta name="author" content="" />

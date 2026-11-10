@@ -170,18 +170,15 @@
     </div>
  
 <!-- JAVASCRIPT  FILES ========================================= --> 
-<!-- All scripts are deferred: they download in parallel and run in this order after the page is parsed -->
+<!-- All scripts are deferred: they download in parallel and run in this order after the page is parsed.
+     Not loaded (coverage-checked: no page uses them): popper, isotope, imagesloaded, owl-filter. -->
 <script src="js/jquery-3.6.1.min.js" defer></script>
-<script src="js/popper.min.js" defer></script><!-- must load before bootstrap -->
 <script src="js/bootstrap.min.js" defer></script>
 <script src="js/magnific-popup.min.js" defer></script>
 <script src="js/waypoints.min.js" defer></script>
 <script src="js/counterup.min.js" defer></script>
 <script src="js/waypoints-sticky.min.js" defer></script>
-<script src="js/isotope.pkgd.min.js" defer></script>
-<script src="js/imagesloaded.pkgd.min.js" defer></script>
 <script src="js/owl.carousel.min.js" defer></script>
-<script src="js/jquery.owl-filter.js" defer></script>
 <script src="js/custom.js?v=20261110" defer></script>
 <script src="js/site-enhancements.js?v=20261110b" defer></script>
 <script src="page-speed-optimization.js?v=20261110" defer></script>
