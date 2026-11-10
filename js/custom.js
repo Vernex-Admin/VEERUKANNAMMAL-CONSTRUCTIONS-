@@ -5,6 +5,24 @@ All JavaScript fuctions Start
 (function ($) {
 
     'use strict';
+
+	// One passive scroll listener and one resize listener for the whole file, each throttled to
+	// one run per animation frame (instead of jQuery handlers firing on every scroll event).
+	function vkFrameThrottled(eventName) {
+		var handlers = [];
+		var queued = false;
+		window.addEventListener(eventName, function () {
+			if (queued) return;
+			queued = true;
+			requestAnimationFrame(function () {
+				queued = false;
+				for (var i = 0; i < handlers.length; i++) handlers[i]();
+			});
+		}, { passive: true });
+		return function (fn) { handlers.push(fn); };
+	}
+	var vkOnScroll = vkFrameThrottled('scroll');
+	var vkOnResize = vkFrameThrottled('resize');
 /*--------------------------------------------------------------------------------------------
 	document.ready ALL FUNCTION START
 ---------------------------------------------------------------------------------------------*/	
@@ -78,7 +96,7 @@ All JavaScript fuctions Start
 			// Reposition when a modal is shown
 			jQuery('.modal').on('show.bs.modal', reposition);
 			// Reposition when the window is resized
-			jQuery(window).on('resize', function() {
+			vkOnResize(function() {
 				jQuery('.modal:visible').each(reposition);
 			});
 		});
@@ -99,22 +117,25 @@ All JavaScript fuctions Start
 //________page scroll top on button click function by = custom.js________//	
 
 	function scroll_top(){
-		jQuery("button.scroltop").on('click', function() {
-			var scrollDuration = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 0 : 1000;
-			jQuery("html, body").animate({
-				scrollTop: 0
-			}, scrollDuration);
-			return false;
+		var button = document.querySelector('button.scroltop');
+		if (!button) return;
+		button.addEventListener('click', function(event) {
+			event.preventDefault();
+			var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
 		});
 
-		jQuery(window).on("scroll", function() {
-			var scroll = jQuery(window).scrollTop();
-			if (scroll > 900) {
-				jQuery("button.scroltop").fadeIn(1000);
-			} else {
-				jQuery("button.scroltop").fadeOut(1000);
+		// Show/hide by toggling a class only when the state changes; CSS fades it with opacity.
+		var shown = null;
+		function update() {
+			var show = window.pageYOffset > 900;
+			if (show !== shown) {
+				shown = show;
+				button.classList.toggle('vk-shown', show);
 			}
-		});
+		}
+		vkOnScroll(update);
+		update();
 	}
 
 
@@ -598,13 +619,11 @@ function mobile_side_drawer() {
 
 	/* 2.2 skills bar widths*/
 
-	function progress_bar_width() {	
-		jQuery( window ).on('scroll', function() {   
-		  jQuery(".progress-bar").each(function(){
-			progress_bar_width = jQuery(this).attr('aria-valuenow');
-			jQuery(this).width(progress_bar_width + '%');
-		  });
-		}); 
+	function progress_bar_width() {
+		// Set once (was re-applied on every scroll event)
+		jQuery('.progress-bar').each(function(){
+			jQuery(this).width(jQuery(this).attr('aria-valuenow') + '%');
+		});
 	}
 
 
@@ -612,13 +631,12 @@ function mobile_side_drawer() {
     Window on scroll ALL FUNCTION START
 ---------------------------------------------------------------------------------------------*/
 
+    var headerFilled = null;
     function color_fill_header() {
-        var scroll = $(window).scrollTop();
-        if(scroll >= 100) {
-            $(".is-fixed").addClass("color-fill");
-        } else {
-            $(".is-fixed").removeClass("color-fill");
-        }
+        var fill = window.pageYOffset >= 100;
+        if (fill === headerFilled) return; // only touch the DOM when the state changes
+        headerFilled = fill;
+        $(".is-fixed").toggleClass("color-fill", fill);
     };	
 
 /*--------------------------------------------------------------------------------------------
@@ -699,20 +717,17 @@ function mobile_side_drawer() {
 	Window Scroll ALL FUNCTION START
 ===========================*/
 
-	jQuery(window).on('scroll', function () {
-//________Window on scroll header color fill________//	 
-		color_fill_header()
-
-	});
+	//________Window on scroll header color fill________//
+	vkOnScroll(color_fill_header);
 
 /*===========================
 	Window Resize ALL FUNCTION START
 ===========================*/
 
-	jQuery(window).on('resize', function () {
-//________ footer fixed on bottom function by = custom.js	________//		 
-	 	footer_fixed(),
-	    equalheight(".equal-wraper .equal-col")	
+	vkOnResize(function () {
+	//________ footer fixed on bottom function by = custom.js________//
+		footer_fixed();
+		equalheight(".equal-wraper .equal-col");
 	});
 
 /*===========================

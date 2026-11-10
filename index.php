@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <?php $pageCss = ['css/alura-project.css']; include __DIR__ . '/append/head.php'; ?>
+    <?php $pageCss = ['css/alura-project.css']; $pagePreloadImage = 'images/projects/alura/alura-exterior-client-photo.jpg'; include __DIR__ . '/append/head.php'; ?>
 
     <meta name="keywords" content="Veeru Kannammal Construction, best construction company Chennai, #1 builders Chennai, VK construction Chennai, top construction contractors Chennai, house construction Chennai, building contractors Chennai, residential construction Chennai, commercial construction Chennai, home builders Chennai, construction company Medavakkam, construction services Chennai, building construction Chennai, renovation contractors Chennai, interior construction Chennai, construction packages Chennai, affordable construction Chennai, quality construction Chennai, trusted builders Chennai, construction estimate Chennai, house builders near me, construction contractors near me, Chennai construction services, building renovation Chennai, villa construction Chennai, apartment construction Chennai, construction cost per sqft Chennai, construction company Tamil Nadu, best builders Tamil Nadu, construction in OMR, construction in ECR, construction Velachery, construction Pallikaranai, construction Sholinganallur, construction Tambaram, construction Chromepet, house construction cost Chennai, building permits Chennai, construction consultation Chennai, architectural services Chennai, structural construction Chennai, civil construction Chennai, construction management Chennai, construction planning Chennai, construction design Chennai, custom home builders Chennai, luxury construction Chennai, budget construction Chennai, construction financing Chennai, construction insurance Chennai, green construction Chennai, sustainable building Chennai, smart homes Chennai, modern construction Chennai, traditional construction Chennai, concrete construction Chennai, steel construction Chennai, construction materials Chennai, construction equipment Chennai, construction workers Chennai, construction supervision Chennai, construction quality control Chennai, construction safety Chennai, construction timeline Chennai, construction warranty Chennai, construction after sales service Chennai, 24/7 construction support Chennai" />
     <meta name="author" content="Veeru Kannammal Construction - Premier Construction Company Chennai" />
@@ -498,12 +498,12 @@
                         <!-- <div class="section-content"> -->
                             <div class="section-content mt-4 p-tb10">
                                 <div class="owl-carousel home-client-carousel-2 owl-theme">
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w1.webp" alt="" loading="lazy" decoding="async"></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w2.webp" alt="" loading="lazy" decoding="async"></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w3.webp" alt="" loading="lazy" decoding="async"></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w4.webp" alt="" loading="lazy" decoding="async"></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w5.webp" alt="" loading="lazy" decoding="async"></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w6.webp" alt="" loading="lazy" decoding="async"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w1.webp" alt="" loading="lazy" decoding="async" width="335" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w2.webp" alt="" loading="lazy" decoding="async" width="440" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w3.webp" alt="" loading="lazy" decoding="async" width="416" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w4.webp" alt="" loading="lazy" decoding="async" width="414" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w5.webp" alt="" loading="lazy" decoding="async" width="307" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w6.webp" alt="" loading="lazy" decoding="async" width="409" height="230"></a></div>
                                 </div>
                             </div>
                         <!-- </div> -->
@@ -519,7 +519,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6  m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic1.webp" alt="VK Construction residential building project in Chennai - Quality construction services by Veeru Kannammal Construction" loading="lazy" decoding="async" />
+                                    <img src="images/pic1.webp" alt="VK Construction residential building project in Chennai - Quality construction services by Veeru Kannammal Construction" loading="lazy" decoding="async" width="1002" height="1500" />
                                     <div class="figcaption">
                                         <h4>Construction</h4>
                                         <p>Engineering your dreams with us.</p>
@@ -533,7 +533,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6 m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic2.webp" alt="VK Construction renovation and remodeling services in Chennai - Professional interior and exterior upgrades" loading="lazy" decoding="async" />
+                                    <img src="images/pic2.webp" alt="VK Construction renovation and remodeling services in Chennai - Professional interior and exterior upgrades" loading="lazy" decoding="async" width="1067" height="1600" />
                                     <div class="figcaption">
                                         <h4>Renovation</h4>
                                         <p>Dazzling Design.</p>
@@ -546,7 +546,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6 m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic3.webp" alt="VK Construction consultation and design services - Expert construction planning and architectural guidance in Chennai" loading="lazy" decoding="async" />
+                                    <img src="images/pic3.webp" alt="VK Construction consultation and design services - Expert construction planning and architectural guidance in Chennai" loading="lazy" decoding="async" width="1000" height="1500" />
                                     <div class="figcaption site-bg-dark">
                                         <h4>Consultation</h4>
                                         <p>Thoughful Insights</p>
@@ -592,19 +592,19 @@
                                         <!-- COLUMNS 1 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap1.webp" alt="" loading="lazy" decoding="async"></a>
+                                                <a href="about.php"><img src="images/gallery/ap1.webp" alt="" loading="lazy" decoding="async" width="1280" height="1280"></a>
                                            </div>
                                         </div>
                                         <!-- COLUMNS 2 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap2.webp" alt="" loading="lazy" decoding="async"></a>
+                                                <a href="about.php"><img src="images/gallery/ap2.webp" alt="" loading="lazy" decoding="async" width="1080" height="1074"></a>
                                            </div>
                                         </div>
                                         <!-- COLUMNS 3 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap3.webp" alt="" loading="lazy" decoding="async"></a>
+                                                <a href="about.php"><img src="images/gallery/ap3.webp" alt="" loading="lazy" decoding="async" width="1280" height="1280"></a>
                                            </div>
                                         </div>
 
@@ -1046,7 +1046,7 @@
             <!-- PRICING COMPARISON SECTION END -->
 
             <!-- CLIENT TESTIMONIALS SECTION START -->
-            <div class="section-full mobile-page-padding p-t80 p-b80 bg-gray testimonials-wrap" style="background-image:url(images/background/bg-4.webp); background-repeat: no-repeat; background-position: right center;">
+            <div class="section-full mobile-page-padding p-t80 p-b80 bg-gray testimonials-wrap vk-cv" style="background-image:url(images/background/bg-4.webp); background-repeat: no-repeat; background-position: right center;">
                 <div class="container">
                     <!-- TITLE START -->
                     <div class="section-head text-center">
@@ -1068,13 +1068,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-1-poster.webp" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-1-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 1">
                                                     <source data-src="videos/Testimonial-Video-1.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 1">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-1-poster.webp" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-1-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/lV55OMs0hWM?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 1 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1088,13 +1088,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-2-poster.webp" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-2-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 2">
                                                     <source data-src="videos/Testimonial-Video-2.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 2">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-2-poster.webp" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-2-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/_oAMthHscDk?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 2 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1108,13 +1108,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-3-poster.webp" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-3-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 3">
                                                     <source data-src="videos/Testimonial-Video-3.mp4?v=20261105-duration-fix" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 3">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-3-poster.webp" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-3-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 3 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1128,13 +1128,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-4-poster.webp" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-4-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 4">
                                                     <source data-src="videos/Testimonial-Video-4.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 4">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-4-poster.webp" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-4-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 4 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1148,13 +1148,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-5-poster.webp" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-5-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 5">
                                                     <source data-src="videos/Testimonial-Video-5.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 5">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-5-poster.webp" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-5-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 5 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1234,23 +1234,23 @@
                                         </div>
 
                                       <!-- <div class="p-2">
-                                      <img src="images/icici.webp" loading="lazy" decoding="async" >
+                                      <img src="images/icici.webp" loading="lazy" decoding="async" width="1200" height="242" >
                                       </div>
                                        <div class="p-2">
-                                      <img src="images/sbi.jpeg" loading="lazy" decoding="async" >
+                                      <img src="images/sbi.jpeg" loading="lazy" decoding="async" width="644" height="168" >
                                       </div>
                                        <div class="p-2">
-                                      <img src="images/hdfc.webp" loading="lazy" decoding="async" >
+                                      <img src="images/hdfc.webp" loading="lazy" decoding="async" width="1600" height="277" >
                                       </div> -->
                                       <div class="d-flex flex-wrap justify-content-center">
                                         <div class="p-2">
-                                            <img src="images/icici.webp" class="img-fluid" style="max-width: 200px;" alt="ICICI" loading="lazy" decoding="async">
+                                            <img src="images/icici.webp" class="img-fluid" style="max-width: 200px;" alt="ICICI" loading="lazy" decoding="async" width="1200" height="242">
                                         </div>
                                         <div class="p-2">
-                                            <img src="images/sbi.jpeg" class="img-fluid" style="max-width: 200px;" alt="SBI" loading="lazy" decoding="async">
+                                            <img src="images/sbi.jpeg" class="img-fluid" style="max-width: 200px;" alt="SBI" loading="lazy" decoding="async" width="644" height="168">
                                         </div>
                                         <div class="p-2">
-                                            <img src="images/hdfc.webp" class="img-fluid" style="max-width: 200px;" alt="HDFC" loading="lazy" decoding="async">
+                                            <img src="images/hdfc.webp" class="img-fluid" style="max-width: 200px;" alt="HDFC" loading="lazy" decoding="async" width="1600" height="277">
                                         </div>
                                         </div>
 
@@ -1354,7 +1354,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">1</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Residential <br> Construction</h4>
@@ -1372,7 +1372,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">2</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Commercial  <br>Construction</h4>
@@ -1390,7 +1390,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">3</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Renovation <br> Remodeling</h4>
@@ -1408,7 +1408,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">4</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Consultation And Design</h4>
@@ -1836,7 +1836,7 @@ function setupScrollListener() {
         }
     }
     
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true, once: true });
 }
 </script>
 

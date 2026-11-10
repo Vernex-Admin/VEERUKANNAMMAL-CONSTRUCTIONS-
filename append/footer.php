@@ -11,7 +11,7 @@
                             <div class="widget widget_about">
                                 <!-- <h4 class="widget-title">About Company</h4> -->
                                     <!-- <div style="overflow: hidden;"> -->
-                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.webp" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;" loading="lazy" decoding="async">
+                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.webp" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;" loading="lazy" decoding="async" width="705" height="559">
                                     <!-- </div> -->
 								<p class="max-w400">When it comes to your house, don’t mess with the rest, trust the best. Making your vision come true, that is what we do.</p>                                
                                 
@@ -163,11 +163,11 @@
 <script src="js/counterup.min.js" defer></script>
 <script src="js/waypoints-sticky.min.js" defer></script>
 <script src="js/owl.carousel.min.js" defer></script>
-<script src="js/custom.js?v=20261110" defer></script>
-<script src="js/site-enhancements.js?v=20261110f" defer></script>
+<script src="js/custom.js?v=20261110i" defer></script>
+<script src="js/site-enhancements.js?v=20261110i" defer></script>
 <script src="page-speed-optimization.js?v=20261110" defer></script>
 <script src="js/shortcode.js" defer></script>
-<script src="js/jquery.bgscroll.js" defer></script>
+<script src="js/jquery.bgscroll.js?v=20261110i" defer></script>
 
 
 

@@ -21,9 +21,9 @@
 
 .alura-feature-lead {
     display: grid;
-    /* photo column ~45%, text column ~55%; both start at the top */
+    /* photo column ~45%, text column ~55%; the text sits centred against the photos (no empty gap under it) */
     grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
 }
 
@@ -325,7 +325,7 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease, transform 200ms ease;
 }
 
 .alura-button-primary {
@@ -690,7 +690,7 @@
     border: 1px solid rgba(17, 61, 86, .1);
     background: rgba(255, 255, 255, .72);
     box-shadow: 0 8px 24px rgba(20, 40, 50, .045);
-    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+    transition: transform 200ms ease, border-color 200ms ease;
 }
 
 .alura-information-card:hover {
@@ -1335,5 +1335,14 @@
         top: auto;
         bottom: 52px;
         transform: none;
+    }
+}
+
+/* No backdrop blur behind the dialogs on phones/tablets (expensive to paint) */
+@media (max-width: 991px) {
+    .alura-walkthrough-dialog::backdrop,
+    .alura-brochure-dialog::backdrop {
+        -webkit-backdrop-filter: none;
+        backdrop-filter: none;
     }
 }

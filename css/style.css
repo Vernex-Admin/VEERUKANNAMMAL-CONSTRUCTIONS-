@@ -15809,7 +15809,6 @@ transition: all 0.5s linear;
 
 .bg-changer .section-bg {
 	opacity: 0;
-	will-change: opacity, transform;
 	transform: scale(1);
 	transition: opacity 0.5s 0.2s ease, transform 5s 0.2s ease;
 }

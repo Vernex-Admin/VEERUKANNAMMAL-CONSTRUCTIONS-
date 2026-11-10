@@ -3,6 +3,28 @@
 
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+    /* Run heavy work after the next paint, so a click shows its result first (better INP). */
+    function afterNextPaint(fn) {
+        requestAnimationFrame(() => {
+            if (window.scheduler && typeof window.scheduler.yield === 'function') window.scheduler.yield().then(fn);
+            else setTimeout(fn, 0);
+        });
+    }
+
+    /* Owl carousels: pause autoplay while off screen, resume when visible again. */
+    function pauseOffscreenCarousels() {
+        if (!window.jQuery || !('IntersectionObserver' in window) || motionPreference.matches) return;
+        const $ = window.jQuery;
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                const owl = $(entry.target).data('owl.carousel');
+                if (!owl || !owl.settings || !owl.settings.autoplay) return;
+                $(entry.target).trigger(entry.isIntersecting ? 'play.owl.autoplay' : 'stop.owl.autoplay');
+            });
+        }, { rootMargin: '100px 0px' });
+        document.querySelectorAll('.owl-carousel').forEach((el) => observer.observe(el));
+    }
+
     /* =============================================
        HEADER — reserve its height so the page never jumps
        ============================================= */
@@ -297,7 +319,10 @@
                         if (status) status.classList.add('is-ready');
                     }, 2600);
                 } else if (dialog.dataset.walkthroughState !== 'loading') {
-                    startLoading(dialog, dialog.dataset.walkthroughState === 'failed');
+                    const retry = dialog.dataset.walkthroughState === 'failed';
+                    dialog.dataset.walkthroughState = 'loading';
+                    setStatus(dialog, 'Loading the interactive walkthrough…');
+                    afterNextPaint(() => startLoading(dialog, retry)); // open the dialog first, then load the tour
                 }
                 return;
             }
@@ -377,10 +402,10 @@
                 if (!dialog) return;
 
                 const frame = dialog.querySelector('iframe[data-src]');
-                if (frame && !frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
-
                 if (typeof dialog.showModal === 'function') dialog.showModal();
                 else dialog.setAttribute('open', '');
+                // Start loading the PDF after the dialog has painted
+                if (frame && !frame.getAttribute('src')) afterNextPaint(() => frame.setAttribute('src', frame.dataset.src));
                 return;
             }
 
@@ -494,6 +519,9 @@
         markActiveNavItem();
 
         window.addEventListener('load', stopAutomaticCarouselMotion, { once: true });
+        // Carousels are created by custom.js on jQuery-ready; set up the pause logic once the page has loaded
+        if (document.readyState === 'complete') pauseOffscreenCarousels();
+        else window.addEventListener('load', pauseOffscreenCarousels, { once: true });
 
         if (motionPreference.addEventListener) {
             motionPreference.addEventListener('change', (event) => {

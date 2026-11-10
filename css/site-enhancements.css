@@ -1,7 +1,9 @@
 /* Lightweight interaction and accessibility improvements */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 96px;
+    /* No smooth scroll-behavior on html: it fought the JS/anchor scrolling and the sticky header.
+       Anchors land below the fixed header via scroll-padding instead. */
+    scroll-behavior: auto;
+    scroll-padding-top: var(--vk-header-h, 95px);
 }
 
 /* =============================================
@@ -33,12 +35,12 @@ body {
 .site-header .main-bar {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    transition: background-color 200ms ease, box-shadow 200ms ease;
+    transition: none;
 }
 
 .sticky-header {
-    /* Smooth sticky transition instead of jumping */
-    transition: box-shadow 200ms ease;
+    /* The sticky header only toggles a class; nothing animates layout or shadows */
+    transition: none;
 }
 
 .sticky-header.is-fixed {
@@ -184,8 +186,20 @@ body {
 /* =============================================
    SCROLL-TO-TOP BUTTON — smooth fade
    ============================================= */
+/* Shown/hidden by toggling .vk-shown (custom.js); fades with opacity only */
 button.scroltop {
-    transition: opacity 300ms ease, transform 300ms ease !important;
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 300ms ease, visibility 0s linear 300ms !important;
+}
+
+button.scroltop.vk-shown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 300ms ease, visibility 0s !important;
 }
 
 /* =============================================
@@ -208,7 +222,7 @@ button.scroltop {
     text-decoration: none !important;
     box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.2) !important;
     animation: vk-wa-enter 300ms ease-out both !important;
-    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease !important;
+    transition: transform 200ms ease, opacity 200ms ease !important;
     cursor: pointer !important;
 }
 
@@ -315,8 +329,8 @@ button.scroltop {
 .work-box,
 .service-box,
 .mt-icon-box-wraper {
-    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
-        box-shadow 180ms ease, transform 180ms ease;
+    /* hover: transform/opacity only (shadow changes no longer animate frame by frame) */
+    transition: transform 200ms ease, opacity 200ms ease;
 }
 
 .site-button:hover,
@@ -651,5 +665,66 @@ button.scroltop {
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* =============================================
+   PERFORMANCE — scrolling & paint
+   ============================================= */
+/* No fixed-background parallax on phones/tablets: it repaints the whole banner on every scroll */
+@media (max-width: 991px) {
+    html .bg-parallax,
+    html .bg-fixed,
+    html #bg {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Phones: the theme turns every link into a shrink-to-fit "inline-flex" box (tap-target rule), so a link
+   around a carousel/gallery photo is only 44px wide until the photo loads; then the photo jumps to full size
+   and pushes the page down. These links take the full width instead, so the photo's space is reserved up front. */
+@media (max-width: 767px) {
+    .owl-carousel .item > a,
+    .mt-img-effect > a {
+        width: 100%;
+    }
+}
+
+/* Long sections below the fold: the browser skips rendering them until they come close.
+   "auto" remembers the real height once rendered, so the page and scrollbar don't jump. */
+.site-footer,
+.vk-cv {
+    content-visibility: auto;
+    contain-intrinsic-height: auto 605px;
+}
+
+/* content-box heights (section padding is added on top) */
+.vk-cv.testimonials-wrap { contain-intrinsic-height: auto 1095px; }
+.site-footer { contain-intrinsic-height: auto 480px; }
+
+@media (max-width: 991px) {
+    .vk-cv { contain-intrinsic-height: auto 560px; }
+    .vk-cv.testimonials-wrap { contain-intrinsic-height: auto 908px; }
+    .site-footer { contain-intrinsic-height: auto 1020px; }
+}
+
+@media (max-width: 576px) {
+    .vk-cv { contain-intrinsic-height: auto 593px; }
+    .vk-cv.testimonials-wrap { contain-intrinsic-height: auto 1077px; }
+    .site-footer { contain-intrinsic-height: auto 1782px; }
+}
+
+/* Mobile menu drawer: slide with transform (compositor) instead of animating `left` (layout every frame).
+   Same width, timing and look as before. */
+@media (max-width: 991px) {
+    .header-style-1.mobile-sider-drawer-menu .header-nav {
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.5s linear;
+    }
+
+    .header-style-1.mobile-sider-drawer-menu.active .header-nav {
+        left: 0;
+        transform: none;
     }
 }

@@ -163,7 +163,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">1</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Residential Construction</h4>
@@ -181,7 +181,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">2</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Commercial Construction</h4>
@@ -199,7 +199,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">3</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Renovation and Remodeling</h4>
@@ -217,7 +217,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">4</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async"></span>
+                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Consultation and Design</h4>

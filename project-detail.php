@@ -56,21 +56,21 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic7.webp" alt="">
+                                            <img src="images/projects/portrait/pic7.webp" alt="" width="510" height="632" decoding="async">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic4.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/portrait/pic4.webp" alt="" loading="lazy" decoding="async" width="510" height="632">
                                         </div>
                                     </div>                        	
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic5.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/portrait/pic5.webp" alt="" loading="lazy" decoding="async" width="510" height="632">
                                         </div>
                                     </div>                        	
                                 </div>                                
@@ -165,7 +165,7 @@
                                     <!-- COLUMNS 1 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic4.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/square/pic4.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Delivering architecture, planning, and design.</a></h4>
@@ -176,7 +176,7 @@
                                     <!-- COLUMNS 2 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic7.webp" alt="">
+                                            <img src="images/projects/square/pic7.webp" alt="" width="510" height="510" decoding="async">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Capitalizing on the unique qualities of each place.</a></h4>
@@ -187,7 +187,7 @@
                                     <!-- COLUMNS 3 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic5.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/square/pic5.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Delivering architecture, planning, and design.</a></h4>
@@ -198,7 +198,7 @@
                                     <!-- COLUMNS 4 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic6.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/square/pic6.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info  p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Improving quality of life with an integrated unified.</a></h4>
@@ -209,7 +209,7 @@
                                     <!-- COLUMNS 5 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic3.webp" alt="" loading="lazy" decoding="async">
+                                            <img src="images/projects/square/pic3.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Unique solutions for your home through.</a></h4>

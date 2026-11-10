@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <?php $pageCss = ['css/alura-project.css']; include __DIR__ . '/append/head.php'; ?>
+    <?php $pageCss = ['css/alura-project.css']; $pagePreloadImage = 'images/banner/1.webp'; include __DIR__ . '/append/head.php'; ?>
 
     <meta name="keywords" content="" />
     <meta name="author" content="" />
@@ -73,7 +73,7 @@
 
 
         <!-- SECTION CONTENT START -->
-            <div class="section-full p-tb80 bg-gray inner-page-padding">
+            <div class="section-full p-tb80 bg-gray inner-page-padding vk-cv">
                 <div class="container-fluid">
                     <div class="section-head">
 						<div class="mt-separator-outer separator-center">
@@ -89,7 +89,7 @@
                                 <!-- COLUMNS 1 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap1.webp" alt="VK Construction Avonlia Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap1.webp" alt="VK Construction Avonlia Project Chennai" loading="lazy" decoding="async" width="1280" height="1280">
                                    </div>
                                     <div class="mt-info p-a30">
                                         <h4 class="m-b20 m-t0">Avonlia</h4>
@@ -100,7 +100,7 @@
                                 <!-- COLUMNS 2 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap2.webp" alt="VK Construction Avance Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap2.webp" alt="VK Construction Avance Project Chennai" loading="lazy" decoding="async" width="1080" height="1074">
                                    </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0">Avance</h4>
@@ -111,7 +111,7 @@
                                 <!-- COLUMNS 3 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap3.webp" alt="VK Construction AVONLEA Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap3.webp" alt="VK Construction AVONLEA Project Chennai" loading="lazy" decoding="async" width="1280" height="1280">
                                    </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0">AVONLEA</h4>
@@ -122,7 +122,7 @@
                                 <!-- COLUMNS 4 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap4.webp" alt="VK Construction TEJU TENEMENT Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap4.webp" alt="VK Construction TEJU TENEMENT Project Chennai" loading="lazy" decoding="async" width="1280" height="819">
                                    </div>
                                         <div class="mt-info  p-a30">
                                             <h4 class="m-b20 m-t0">TEJU TENEMENT</h4>
@@ -133,7 +133,7 @@
                                 <!-- COLUMNS 5 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap5.webp" alt="VK Construction WOODS VILLE Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap5.webp" alt="VK Construction WOODS VILLE Project Chennai" loading="lazy" decoding="async" width="788" height="427">
                                    </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0">WOODS VILLE</h4>
@@ -144,7 +144,7 @@
                                 <!-- COLUMNS 6 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/ap6.webp" alt="VK Construction BEELINE Project Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/ap6.webp" alt="VK Construction BEELINE Project Chennai" loading="lazy" decoding="async" width="1280" height="1250">
                                    </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0">BEELINE</h4>
@@ -163,7 +163,7 @@
 
 
               <!-- SECTION CONTENT START -->
-            <div class="section-full p-b80 bg-gray inner-page-padding">
+            <div class="section-full p-b80 bg-gray inner-page-padding vk-cv">
                 <div class="container-fluid">
                     <div class="section-head">
 						<div class="mt-separator-outer separator-center">
@@ -178,7 +178,7 @@
                                 <!-- COLUMNS 1 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (1).webp" alt="VK Construction Interior Project 1 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (1).webp" alt="VK Construction Interior Project 1 Chennai" loading="lazy" decoding="async" width="1280" height="853">
                                    </div>
                                     <!--<div class="mt-info p-a30">-->
                                     <!--    <h4 class="m-b20 m-t0">Avonlia</h4>-->
@@ -189,7 +189,7 @@
                                 <!-- COLUMNS 2 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (2).webp" alt="VK Construction Interior Project 2 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (2).webp" alt="VK Construction Interior Project 2 Chennai" loading="lazy" decoding="async" width="1280" height="853">
                                    </div>
                                         <!--<div class="mt-info p-a30">-->
                                         <!--    <h4 class="m-b20 m-t0">Avance</h4>-->
@@ -200,7 +200,7 @@
                                 <!-- COLUMNS 3 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (3).webp" alt="VK Construction Interior Project 3 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (3).webp" alt="VK Construction Interior Project 3 Chennai" loading="lazy" decoding="async" width="780" height="1040">
                                    </div>
                                         <!--<div class="mt-info p-a30">-->
                                         <!--    <h4 class="m-b20 m-t0">AVONLEA</h4>-->
@@ -211,7 +211,7 @@
                                 <!-- COLUMNS 4 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (4).webp" alt="VK Construction Interior Project 4 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (4).webp" alt="VK Construction Interior Project 4 Chennai" loading="lazy" decoding="async" width="1040" height="780">
                                    </div>
                                         <!--<div class="mt-info  p-a30">-->
                                         <!--    <h4 class="m-b20 m-t0">TEJU TENEMENT</h4>-->
@@ -222,7 +222,7 @@
                                 <!-- COLUMNS 5 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (5).webp" alt="VK Construction Interior Project 5 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (5).webp" alt="VK Construction Interior Project 5 Chennai" loading="lazy" decoding="async" width="853" height="1280">
                                    </div>
                                         <!--<div class="mt-info p-a30">-->
                                         <!--    <h4 class="m-b20 m-t0">WOODS VILLE</h4>-->
@@ -233,7 +233,7 @@
                                 <!-- COLUMNS 6 -->
                                 <div class="item mt-box">
                                     <div class="mt-img-effect mt-img-overlay7">
-                                       <img height="300" src="images/gallery/iv/iv1 (6).webp" alt="VK Construction Interior Project 6 Chennai" loading="lazy" decoding="async">
+                                       <img src="images/gallery/iv/iv1 (6).webp" alt="VK Construction Interior Project 6 Chennai" loading="lazy" decoding="async" width="853" height="1280">
                                    </div>
                                         <!--<div class="mt-info p-a30">-->
                                         <!--    <h4 class="m-b20 m-t0">BEELINE</h4>-->

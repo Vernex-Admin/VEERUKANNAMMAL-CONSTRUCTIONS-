@@ -176,7 +176,7 @@
                                 	<div class="col-lg-5 col-md-12">
                                     	<div class="service-about-left">
                                         	<div class="mt-media">
-                                       	    	<img src="images/s-1.webp" alt="" loading="lazy" decoding="async"> 
+                                                <img src="images/s-1.webp" alt="" loading="lazy" decoding="async" width="424" height="500">
                                             </div>
                                         </div>
                                     </div>
@@ -362,7 +362,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/construction.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/construction.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Feasibility Analysis</h4>
@@ -375,7 +375,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/architecture.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/architecture.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Design and Planning</h4>
@@ -388,7 +388,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/construction-site.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/construction-site.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Construction Execution</h4>
@@ -400,7 +400,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/estate.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/estate.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Budget and Cost Management</h4>
@@ -416,7 +416,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/architect.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/architect.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Architectural Design</h4>
@@ -429,7 +429,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/road-construction.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/road-construction.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Interior Design</h4>
@@ -442,7 +442,7 @@
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/bid.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/bid.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Concept Development</h4>
@@ -454,7 +454,7 @@
                             <div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
                                     <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/layout.webp" loading="lazy" decoding="async"></span>
+                                        <span class="icon-cell text-secondry"><img src="images/icon/layout.webp" loading="lazy" decoding="async" width="512" height="512"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">3D Visualization</h4>

@@ -4,7 +4,8 @@
  *
  *     <?php $pageCss = ['css/alura-project.css']; include __DIR__ . '/append/head.php'; ?>
  *
- * $pageCss is optional (extra stylesheets for that page only). Vendor sheets that only
+ * $pageCss is optional (extra stylesheets for that page only).
+ * $pagePreloadImage is optional: the page's LCP image (preloaded with high priority). Vendor sheets that only
  * one page needs (Magnific lightbox, Flaticon icons) are listed there too, and are
  * placed before style.css so the theme's overrides still win.
  * Each page keeps its own <title>, description, canonical, Open Graph and schema.
@@ -15,7 +16,8 @@ $pageCss = isset($pageCss) && is_array($pageCss) ? $pageCss : [];
 $vkOptionalVendorCss = ['css/magnific-popup.min.css', 'css/flaticon.min.css'];
 $pageVendorCss = array_values(array_intersect($pageCss, $vkOptionalVendorCss));
 $pageCss = array_values(array_diff($pageCss, $vkOptionalVendorCss));
-$vkAssetVersion = '20261110f'; // bump when CSS changes so browsers fetch the new files
+$pagePreloadImage = isset($pagePreloadImage) && is_string($pagePreloadImage) ? $pagePreloadImage : '';
+$vkAssetVersion = '20261110j'; // bump when CSS changes so browsers fetch the new files
 $vkAsset = static fn(string $path): string => htmlspecialchars($path . (str_contains($path, '?') ? '&' : '?') . 'v=' . $vkAssetVersion, ENT_QUOTES, 'UTF-8');
 ?>
     <meta charset="utf-8">
@@ -29,10 +31,16 @@ $vkAsset = static fn(string $path): string => htmlspecialchars($path . (str_cont
     <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest?v=3">
 
-    <!-- Connect early to the font and icon servers -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Connect early to the icon CDN -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+    <!-- Self-hosted fonts: preload the two used above the fold (Poppins 400/600, latin) -->
+    <link rel="preload" href="fonts/vk/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="fonts/vk/poppins-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<?php if ($pagePreloadImage !== ''): ?>
+    <!-- This page's largest above-the-fold image (LCP) -->
+    <link rel="preload" as="image" href="<?= htmlspecialchars($pagePreloadImage, ENT_QUOTES, 'UTF-8'); ?>" fetchpriority="high">
+<?php endif; ?>
 
     <!-- Styles (the brand skin must stay last) -->
     <link rel="stylesheet" href="<?= $vkAsset('css/bootstrap.min.css'); ?>">
@@ -51,7 +59,7 @@ $vkAsset = static fn(string $path): string => htmlspecialchars($path . (str_cont
 <?php endforeach; ?>
     <link rel="stylesheet" class="skin" href="<?= $vkAsset('css/skin/skin-5.css'); ?>">
 
-    <!-- Fonts: two weights per family; display=swap shows text immediately -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;600&display=swap">
+    <!-- Fonts: Poppins + Roboto 400/600, self-hosted (font-display: swap) -->
+    <link rel="stylesheet" href="<?= $vkAsset('css/fonts.css'); ?>">
 
 <?php include __DIR__ . '/../google-analytics.php'; ?>
