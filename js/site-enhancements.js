@@ -442,8 +442,50 @@
     /* =============================================
        MAIN INIT
        ============================================= */
+    /* Alura images: open in an on-page viewer (close, prev/next, Esc) instead of a new tab */
+    function initAluraLightbox() {
+        const links = Array.from(document.querySelectorAll('.alura-image-open'));
+        if (!links.length || typeof HTMLDialogElement === 'undefined') return;
+        const dlg = document.createElement('dialog');
+        dlg.className = 'vk-lightbox';
+        dlg.setAttribute('aria-label', 'Image viewer');
+        dlg.innerHTML =
+            '<button type="button" class="vk-lb-close" aria-label="Close image"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+            '<button type="button" class="vk-lb-prev" aria-label="Previous image"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>' +
+            '<img alt="">' +
+            '<button type="button" class="vk-lb-next" aria-label="Next image"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>' +
+            '<p class="vk-lb-caption"></p>';
+        document.body.appendChild(dlg);
+        const img = dlg.querySelector('img');
+        const caption = dlg.querySelector('.vk-lb-caption');
+        let current = 0;
+        const show = (n) => {
+            current = (n + links.length) % links.length;
+            const link = links[current];
+            const thumb = link.querySelector('img');
+            const figcaption = link.closest('figure') && link.closest('figure').querySelector('figcaption');
+            img.src = link.getAttribute('href');
+            img.alt = thumb ? thumb.alt : '';
+            caption.textContent = figcaption ? figcaption.textContent.trim() : '';
+        };
+        links.forEach((link, n) => link.addEventListener('click', (event) => {
+            event.preventDefault();
+            show(n);
+            dlg.showModal();
+        }));
+        dlg.querySelector('.vk-lb-close').addEventListener('click', () => dlg.close());
+        dlg.querySelector('.vk-lb-prev').addEventListener('click', () => show(current - 1));
+        dlg.querySelector('.vk-lb-next').addEventListener('click', () => show(current + 1));
+        dlg.addEventListener('click', (event) => { if (event.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') show(current - 1);
+            if (event.key === 'ArrowRight') show(current + 1);
+        });
+    }
+
     function initialize() {
         reserveHeaderSpace();
+        initAluraLightbox();
         initializeTestimonialVideos();
         initializeAluraWalkthrough();
         initializeAluraBrochure();

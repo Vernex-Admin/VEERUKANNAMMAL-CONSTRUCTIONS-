@@ -164,7 +164,7 @@
 <script src="js/waypoints-sticky.min.js" defer></script>
 <script src="js/owl.carousel.min.js" defer></script>
 <script src="js/custom.js?v=20261110" defer></script>
-<script src="js/site-enhancements.js?v=20261110e" defer></script>
+<script src="js/site-enhancements.js?v=20261110f" defer></script>
 <script src="page-speed-optimization.js?v=20261110" defer></script>
 <script src="js/shortcode.js" defer></script>
 <script src="js/jquery.bgscroll.js" defer></script>

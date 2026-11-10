@@ -15,7 +15,7 @@ $pageCss = isset($pageCss) && is_array($pageCss) ? $pageCss : [];
 $vkOptionalVendorCss = ['css/magnific-popup.min.css', 'css/flaticon.min.css'];
 $pageVendorCss = array_values(array_intersect($pageCss, $vkOptionalVendorCss));
 $pageCss = array_values(array_diff($pageCss, $vkOptionalVendorCss));
-$vkAssetVersion = '20261110e'; // bump when CSS changes so browsers fetch the new files
+$vkAssetVersion = '20261110f'; // bump when CSS changes so browsers fetch the new files
 $vkAsset = static fn(string $path): string => htmlspecialchars($path . (str_contains($path, '?') ? '&' : '?') . 'v=' . $vkAssetVersion, ENT_QUOTES, 'UTF-8');
 ?>
     <meta charset="utf-8">

@@ -10,21 +10,21 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
         <div class="alura-feature-lead">
             <div class="alura-gallery" aria-label="Alura Apartments project images">
                 <figure class="alura-gallery-main">
-                    <a class="alura-image-open" href="images/projects/alura/alura-exterior-client-photo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments exterior rendering at full size in a new tab">
+                    <a class="alura-image-open" href="images/projects/alura/alura-exterior-client-photo.jpg" aria-label="Open the Alura Apartments exterior rendering at full size">
                         <img src="images/projects/alura/alura-exterior-client-photo.jpg" width="720" height="720" alt="Exterior rendering of Alura Apartments" loading="eager" fetchpriority="high" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
                     <figcaption>Alura Apartments · exterior rendering</figcaption>
                 </figure>
                 <figure class="alura-gallery-inset">
-                    <a class="alura-image-open" href="images/projects/alura/alura-living-room.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments interior rendering at full size in a new tab">
+                    <a class="alura-image-open" href="images/projects/alura/alura-living-room.jpg" aria-label="Open the Alura Apartments interior rendering at full size">
                         <img src="images/projects/alura/alura-living-room.jpg" width="701" height="561" alt="Furnished living and dining interior rendering" loading="lazy" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
                     <figcaption>Interior view</figcaption>
                 </figure>
                 <figure class="alura-gallery-inset alura-gallery-kitchen">
-                    <a class="alura-image-open" href="images/projects/alura/alura-kitchen.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments kitchen rendering at full size in a new tab">
+                    <a class="alura-image-open" href="images/projects/alura/alura-kitchen.jpg" aria-label="Open the Alura Apartments kitchen rendering at full size">
                         <img src="images/projects/alura/alura-kitchen.jpg" width="701" height="561" alt="Alura Apartments kitchen rendering" loading="lazy" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
@@ -128,7 +128,7 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                 <p class="alura-plan-note">Dimensions shown are indicative; verify them against final drawings and site measurements.</p>
             </div>
             <figure class="alura-floorplan-image">
-                <a class="alura-image-open" href="images/projects/alura/alura-floor-plan.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments floor plan at full size in a new tab">
+                <a class="alura-image-open" href="images/projects/alura/alura-floor-plan.jpg" aria-label="Open the Alura Apartments floor plan at full size">
                     <img src="images/projects/alura/alura-floor-plan.jpg" width="1280" height="1264" alt="Alura Apartments third floor plan from the project brochure" loading="lazy" decoding="async">
                     <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full plan</span>
                 </a>
