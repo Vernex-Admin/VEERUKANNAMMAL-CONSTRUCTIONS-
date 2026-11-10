@@ -37,7 +37,7 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                 <h2 id="alura-project-title-<?= $aluraIsProjectsPage ? 'projects' : 'home'; ?>">Alura Apartments</h2>
                 <p class="alura-location">
                     <span class="alura-location-name"><i class="fa fa-map-marker" aria-hidden="true"></i> Valasaravakkam, Chennai</span>
-                    <a class="alura-location-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8?g_st=aw" target="_blank" rel="noopener noreferrer" aria-label="View Alura Apartments site location on Google Maps">
+                    <a class="alura-location-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8" target="_blank" rel="noopener noreferrer" aria-label="View Alura Apartments site location on Google Maps">
                         <i class="fa fa-map-o" aria-hidden="true"></i> View Site Location
                     </a>
                 </p>
@@ -108,6 +108,16 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                 </ul>
                 <p class="alura-landmark-note">Near playback singer Mano’s residence.</p>
             </article>
+        </div>
+
+        <!-- Site location: the pin from https://maps.app.goo.gl/Wm8tTh2PPknU915y8 (13.050271, 80.176777) -->
+        <div class="alura-map">
+            <div class="alura-map-frame">
+                <iframe title="Alura Apartments location" src="https://maps.google.com/maps?q=13.050271,80.176777&amp;z=17&amp;hl=en&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <a class="alura-map-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> Open in Google Maps
+            </a>
         </div>
 
         <div class="alura-floorplan-card">

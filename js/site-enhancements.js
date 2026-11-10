@@ -20,8 +20,10 @@
             }
         };
         measure();
-        if ('ResizeObserver' in window) new ResizeObserver(measure).observe(bar);
+        // border-box: padding/border changes must update the reserved height too
+        if ('ResizeObserver' in window) new ResizeObserver(measure).observe(bar, { box: 'border-box' });
         else window.addEventListener('resize', measure, { passive: true });
+        window.addEventListener('load', measure, { once: true });
     }
 
     /* =============================================

@@ -141,22 +141,6 @@
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"
             title="Enquire on WhatsApp"
-            style="
-                position: fixed !important;
-                bottom: 24px !important;
-                right: 20px !important;
-                z-index: 99999 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 48px !important;
-                height: 48px !important;
-                border-radius: 50% !important;
-                background-color: #25D366 !important;
-                color: #ffffff !important;
-                text-decoration: none !important;
-                box-shadow: 0 4px 14px rgba(37,211,102,0.45), 0 2px 6px rgba(0,0,0,0.2) !important;
-            "
         >
             <!-- Recognizable WhatsApp SVG icon (white, inline) -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26" fill="#ffffff" aria-hidden="true" focusable="false" style="display:block;flex-shrink:0;">
@@ -180,7 +164,7 @@
 <script src="js/waypoints-sticky.min.js" defer></script>
 <script src="js/owl.carousel.min.js" defer></script>
 <script src="js/custom.js?v=20261110" defer></script>
-<script src="js/site-enhancements.js?v=20261110b" defer></script>
+<script src="js/site-enhancements.js?v=20261110e" defer></script>
 <script src="page-speed-optimization.js?v=20261110" defer></script>
 <script src="js/shortcode.js" defer></script>
 <script src="js/jquery.bgscroll.js" defer></script>

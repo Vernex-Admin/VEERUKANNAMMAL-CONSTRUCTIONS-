@@ -28,6 +28,14 @@ body {
     min-height: var(--vk-header-h, 95px);
 }
 
+/* One header height everywhere, from first paint: style.css gave the bar 5px padding at some
+   widths until the sticky wrapper existed (then 0), and animated "all" properties. */
+.site-header .main-bar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
 .sticky-header {
     /* Smooth sticky transition instead of jumping */
     transition: box-shadow 200ms ease;
@@ -43,27 +51,69 @@ body {
     transition: color 160ms ease !important;
 }
 
-/* Active page indicator underline */
+/* Current page */
 .header-nav .nav > li.active > a {
     color: #074461;
     font-weight: 600;
 }
 
-.header-nav .nav > li > a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    height: 2px;
-    background: #074461;
-    transition: left 160ms ease, right 160ms ease;
+/* =============================================
+   HEADER NAV — one underline (current page only), hover = colour only,
+   and the same box for every link in every state so the header never changes height.
+   Overrides style.css (4px border + 10px padding on the active link, a hover bar on
+   li::after, and the active border disappearing while the menu is hovered).
+   ============================================= */
+.site-header .header-nav ul.nav > li::after,
+.site-header .header-nav ul.nav > li:hover::after {
+    content: none;
+    display: none;
 }
 
-.header-nav .nav > li.active > a::after,
-.header-nav .nav > li > a:hover::after {
-    left: 0;
-    right: 0;
+.site-header .header-nav ul.nav > li > a::after {
+    content: none;
+}
+
+@media (min-width: 992px) {
+    .site-header .header-nav ul.nav > li > a,
+    .site-header .header-nav ul.nav:hover > li.active > a,
+    .site-header .header-nav ul.nav > li.active:hover > a {
+        padding: 35px 12px;
+        border-bottom: 0;
+        background-color: transparent;
+    }
+
+    /* The only underline: under the current page, where the old border sat */
+    .site-header .header-nav ul.nav > li.active > a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 21px;
+        height: 4px;
+        background: #074461;
+    }
+
+    /* Hover / keyboard focus: a light colour change, nothing else */
+    .site-header .header-nav ul.nav > li:not(.active):hover > a,
+    .site-header .header-nav ul.nav > li:not(.active) > a:focus-visible {
+        color: #3d7fa3;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Drawer menu: the current page keeps its blue highlight; hover/tap is a light tint only */
+    .site-header .header-nav ul.nav > li:not(.active) > a:hover,
+    .site-header .header-nav ul.nav > li:not(.active) > a:focus-visible {
+        background-color: #eef4f7 !important;
+        color: #074461 !important;
+    }
+
+    /* Same 1px divider in every state (style.css removed it on the active/hovered link,
+       so items below moved by 1px between pages and on tap) */
+    .site-header .header-nav ul.nav > li.active > a,
+    .site-header .header-nav ul.nav > li > a:hover {
+        border-bottom: 1px solid transparent !important;
+    }
 }
 
 /* Mobile nav — smooth slide in/out */
@@ -232,6 +282,33 @@ button.scroltop {
     }
 }
 
+/* Phones: 52px WhatsApp button 16px from the edges; scroll-to-top centred above it;
+   extra room at the end of the page so the button never covers the last line of text. */
+@media (max-width: 576px) {
+    #vk-whatsapp-float,
+    .vk-whatsapp-float {
+        width: 52px !important;
+        height: 52px !important;
+        right: 16px !important;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    #vk-whatsapp-float svg,
+    .vk-whatsapp-float svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    button.scroltop {
+        right: 27px !important;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .site-footer .footer-bottom {
+        padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+}
+
 .site-button,
 .modern-submit-btn,
 .testimonial-card,
@@ -240,11 +317,6 @@ button.scroltop {
 .mt-icon-box-wraper {
     transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
         box-shadow 180ms ease, transform 180ms ease;
-}
-
-.header-nav .nav > li > a:hover,
-.header-nav .nav > li > a:focus-visible {
-    color: #074461;
 }
 
 .site-button:hover,
