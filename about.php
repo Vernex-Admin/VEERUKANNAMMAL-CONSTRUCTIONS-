@@ -2,18 +2,12 @@
 
 <html lang="en">
 <head>
+    <?php $pageCss = []; include __DIR__ . '/append/head.php'; ?>
 
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="robots" content="" />    
     <meta name="description" content="" />
-
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon-2.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-3.ico" />
 
     <!-- PAGE TITLE HERE -->
     <title>About Veeru Kannammal Construction | Leading Builders in Chennai | VK Construction</title>
@@ -32,38 +26,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vkconstruction.in/about.php" />
     <meta property="og:image" content="https://vkconstruction.in/images/Veeru-Kannammal-Construction-Header-Logo.png" />
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- [if lt IE 9]>
-        <script src="js/html5shiv.min.js"></script>
-        <script src="js/respond.min.js"></script>
-    <![endif] -->
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">	
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Mobile Responsive CSS -->
-    <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Performance CSS -->
-    <!-- Brand Theme Skin (Primary: #074461) -->
-    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105"> 
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Article Schema Markup -->
     <script type="application/ld+json">
@@ -92,9 +54,7 @@
         }
     }
     </script>
-    <meta name="theme-color" content="#074461" />
 
-    <?php include('google-analytics.php'); ?>
 </head>
 
 <body>
@@ -106,7 +66,7 @@
         <div class="page-content">
 
             <!-- INNER PAGE BANNER -->
-            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.jpg);">
+            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.webp);">
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="mt-bnr-inr-entry">
@@ -148,7 +108,7 @@
                     	<div class="row">                     
                     		<div class="col-lg-7 col-md-12">
                             	<div class="m-about-containt text-black">
-                                	<div class="m-about-years bg-moving" style="background-image:url(images/background/line.png);">
+                                	<div class="m-about-years bg-moving" style="background-image:url(images/background/line.webp);">
                                         <span class="site-text-primary large-title">15</span>
                                         <span class="large-title-info">Years of Experience</span>
                                     </div>
@@ -157,7 +117,7 @@
                                     <div class="author-info p-t20">
 
                                       <!--  <div class="author-signature">
-                                            <img src="images/Signature%2bBlack.png" alt="Signature" width="150"/>
+                                            <img src="images/Signature%2BBlack.webp" alt="Signature" width="150" loading="lazy" decoding="async"/>
                                         </div>
 
                                         <div class="author-name">
@@ -203,7 +163,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">1</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/crane-1.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Residential Construction</h4>
@@ -221,7 +181,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">2</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/renovation.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Commercial Construction</h4>
@@ -239,7 +199,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">3</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/toolbox.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Renovation and Remodeling</h4>
@@ -257,7 +217,7 @@
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">4</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/compass.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Consultation and Design</h4>
@@ -297,7 +257,7 @@
                                 <div class="testimonial-2 m-a30 hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Ramesh Kumar -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    
@@ -312,7 +272,7 @@
                                 <div class="testimonial-2 m-a30  hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Priya Sharma -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    
@@ -327,7 +287,7 @@
                                 <div class="testimonial-2 m-a30  hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Vikram Rao -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    

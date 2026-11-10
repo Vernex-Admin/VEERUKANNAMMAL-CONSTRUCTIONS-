@@ -2,24 +2,15 @@
 
 <html lang="en">
 <head>
+    <?php $pageCss = []; include __DIR__ . '/append/head.php'; ?>
 
-    <!-- META -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="robots" content="" />    
     <meta name="description" content="" />
 
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon-2.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-3.ico" />
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.vkconstruction.in/services" />
-    <link rel="icon" type="image/png" sizes="512x512" href="images/vk-favicon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#074461" />
 
     <!-- SEO META TAGS -->
     <meta name="keywords" content="construction services Chennai, residential construction, commercial construction, renovation services, interior design, project management, construction packages, building services" />
@@ -43,33 +34,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://vkconstruction.in/services.php" />
     <meta property="og:image" content="https://vkconstruction.in/images/Veeru-Kannammal-Construction-Header-Logo.png" />
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">	
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Mobile Responsive CSS -->
-    <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->
-    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Service Schema Markup -->
     <script type="application/ld+json">
@@ -165,9 +129,7 @@
         ]
     }
     </script>
-    <meta name="theme-color" content="#074461" />
 
-    <?php include('google-analytics.php'); ?>
 </head>
 
 <body>
@@ -180,7 +142,7 @@
         <div class="page-content">
 
             <!-- INNER PAGE BANNER -->
-            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.jpg);">
+            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.webp);">
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="mt-bnr-inr-entry">
@@ -214,7 +176,7 @@
                                 	<div class="col-lg-5 col-md-12">
                                     	<div class="service-about-left">
                                         	<div class="mt-media">
-                                       	    	<img src="images/s-1.png" alt=""> 
+                                       	    	<img src="images/s-1.webp" alt="" loading="lazy" decoding="async"> 
                                             </div>
                                         </div>
                                     </div>
@@ -243,7 +205,7 @@
 
 
 
-            <div class="section-full our-service2-wrap p-t80 p-b50 bg-white mobile-page-padding" style="background-image:url(images/background/bg-5.png);">
+            <div class="section-full our-service2-wrap p-t80 p-b50 bg-white mobile-page-padding" style="background-image:url(images/background/bg-5.webp);">
 
 				<div class="container">
                     <!-- TITLE START -->
@@ -263,7 +225,7 @@
                         <h3 class="mt-tilte text-uppercase font-weight-600 m-b20 fs-4">Residential Construction</h3>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-city"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -276,7 +238,7 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-paint" ></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -289,7 +251,7 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-crane"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -301,7 +263,7 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-house"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -315,7 +277,7 @@
                             <h3 class="mt-tilte text-uppercase font-weight-600 m-b20 fs-4"> Commercial Construction</h3>
                         	<div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-decorating"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -328,7 +290,7 @@
                             </div> 
                         	<div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-chart"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -341,7 +303,7 @@
                             </div>
                         	<div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-sketch"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -355,7 +317,7 @@
                             <h3 class="mt-tilte text-uppercase font-weight-600 m-b20 fs-4"> Renovation and Remodeling</h3>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-builder"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -368,7 +330,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-drill"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -381,7 +343,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
                                         <span class="icon-cell text-secondry"><i class="flaticon-art-and-design"></i></span>
                                     </div>
                                     <div class="icon-content">
@@ -399,8 +361,8 @@
                             <h3 class="mt-tilte text-uppercase font-weight-600 m-b20 fs-4">  Project Management</h3>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/construction.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/construction.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Feasibility Analysis</h4>
@@ -412,8 +374,8 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/architecture.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/architecture.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Design and Planning</h4>
@@ -425,8 +387,8 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/construction-site.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/construction-site.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Construction Execution</h4>
@@ -437,8 +399,8 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/estate.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/estate.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Budget and Cost Management</h4>
@@ -453,8 +415,8 @@
                             <h4 class="mt-tilte text-uppercase font-weight-600 m-b20 fs-4"> Consultation and Design</h4>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/architect.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/architect.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Architectural Design</h4>
@@ -466,8 +428,8 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/road-construction.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/road-construction.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Interior Design</h4>
@@ -479,8 +441,8 @@
                             </div>
                         	<div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/bid.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/bid.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">Concept Development</h4>
@@ -491,8 +453,8 @@
                             </div>
                             <div class="col-lg-3 col-md-6 col-sm-6">
                             	<div class="mt-icon-box-wraper service-card p-a30 center m-b30 box-shadow bg-white">
-                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.png)">
-                                        <span class="icon-cell text-secondry"><img src="images/icon/layout.png"></span>
+                                    <div class="mt-icon-box-sm inline-icon site-text-primary  m-b20 radius site-bg-white  scale-in-center bg-moving" style="background-image:url(images/background/line.webp)">
+                                        <span class="icon-cell text-secondry"><img src="images/icon/layout.webp" loading="lazy" decoding="async"></span>
                                     </div>
                                     <div class="icon-content">
                                         <h4 class="mt-tilte text-uppercase font-weight-600 m-b20">3D Visualization</h4>
@@ -510,7 +472,7 @@ future spaces.</p>
              </div>   
 
           <!-- OUR MISSION START -->
-            <div class="section-full mobile-page-padding mission-outer-section  p-t80 p-b30 bg-gray bg-no-repeat bg-right-center" style="background-image:url(images/left-men.png), url(images/background/bg-4.png); ">
+            <div class="section-full mobile-page-padding mission-outer-section  p-t80 p-b30 bg-gray bg-no-repeat bg-right-center" style="background-image:url(images/left-men.webp), url(images/background/bg-4.webp); ">
 				<div class="section-content">
                     <div class="container">
                         <!-- TITLE START -->
@@ -525,7 +487,7 @@ future spaces.</p>
 
                         <div class="row">
                         	<div class="col-lg-6 col-md-6 col-sm-12">
-                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.png);">
+                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.webp);">
                                 	<h3 class="m-t0"><span class="font-weight-100"> Site Areas</span><br> Why Choose Us</h3>
                                     <p>Unlock your potential and build your dream career in the heart of innovation and excellence.</p>
                                     <ul class="list-angle-right anchor-line">
@@ -540,7 +502,7 @@ future spaces.</p>
                             </div>
 
                             <div class="col-lg-6 col-md-6 col-sm-12">
-                                <div class="mission-mid bg-no-repeat bg-cover m-b30" style="background-image:url(images/mission.jpeg); min-height: 300px; height: auto;"></div>
+                                <div class="mission-mid bg-no-repeat bg-cover m-b30" style="background-image:url(images/mission-jpeg.webp); min-height: 300px; height: auto;"></div>
                             </div>
 
                         </div>

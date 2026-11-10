@@ -63,7 +63,7 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                         View Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                     </button>
                     <?php else: ?>
-                    <a class="alura-button alura-button-primary alura-button-brochure-download" href="documents/alura-apartments-brochure.pdf" download="Alura-Apartments-Brochure.pdf" aria-label="Download the Alura Apartments project brochure as a PDF">
+                    <a class="alura-button alura-button-primary alura-button-brochure-download" href="documents/alura-apartments-brochure-web.pdf" download="Alura-Apartments-Brochure.pdf" aria-label="Download the Alura Apartments project brochure as a PDF">
                         Download Project Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                     </a>
                     <?php endif; ?>
@@ -192,11 +192,11 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                     </button>
                 </header>
                 <div class="alura-brochure-viewer">
-                    <iframe title="Alura Apartments project brochure" data-src="documents/alura-apartments-brochure.pdf#view=FitH" loading="lazy"></iframe>
+                    <iframe title="Alura Apartments project brochure" data-src="documents/alura-apartments-brochure-web.pdf#view=FitH" loading="lazy"></iframe>
                 </div>
                 <footer class="alura-brochure-dialog-footer">
                     <p>View the brochure here or download a copy to your device.</p>
-                    <a class="alura-button alura-button-primary" href="documents/alura-apartments-brochure.pdf" download="Alura-Apartments-Brochure.pdf">
+                    <a class="alura-button alura-button-primary" href="documents/alura-apartments-brochure-web.pdf" download="Alura-Apartments-Brochure.pdf">
                         Download Brochure <i class="fa fa-download" aria-hidden="true"></i>
                     </a>
                 </footer>

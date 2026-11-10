@@ -69,17 +69,4 @@ if ('performance' in window) {
     });
 }
 
-// Add resource hints for better performance
-if (document.head) {
-    // Preconnect to Google Fonts
-    const preconnectGoogle = document.createElement('link');
-    preconnectGoogle.rel = 'preconnect';
-    preconnectGoogle.href = 'https://fonts.googleapis.com';
-    document.head.appendChild(preconnectGoogle);
-    
-    const preconnectGstatic = document.createElement('link');
-    preconnectGstatic.rel = 'preconnect';
-    preconnectGstatic.href = 'https://fonts.gstatic.com';
-    preconnectGstatic.crossOrigin = 'anonymous';
-    document.head.appendChild(preconnectGstatic);
-}
+// Font/CDN preconnect hints now live in append/head.php (in the HTML, where they take effect earliest).

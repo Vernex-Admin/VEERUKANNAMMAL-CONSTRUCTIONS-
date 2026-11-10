@@ -2,24 +2,15 @@
 <html lang="en">
 
 <head>
+    <?php $pageCss = []; include __DIR__ . '/append/head.php'; ?>
 
-	<!-- META -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="robots" content="" />    
     <meta name="description" content="" />
 
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon-2.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-3.ico" />
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://www.vkconstruction.in/projects" />
-    <link rel="icon" type="image/png" sizes="512x512" href="images/vk-favicon.png" />
-    <link rel="manifest" href="site.webmanifest" />
-    <meta name="theme-color" content="#074461" />
 
     <!-- SEO META TAGS -->
     <meta name="keywords" content="construction projects Chennai, completed projects, residential projects, commercial projects, building portfolio, construction work samples, Avonlia, Avance, VK Construction, Veeru Kannammal Construction" />
@@ -34,45 +25,11 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://vkconstruction.in/images/vk_construction_logo.jpg" />
 
-
     <!-- Canonical URL -->
     <link rel="canonical" href="https://vkconstruction.in/projects.php" />
 
     <!-- PAGE TITLE HERE -->
     <title>Veeru Kannammal Construction Projects Portfolio | Completed Works in Chennai | VK Construction</title>
-
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-    <!-- Theme color -->
-    <meta name="theme-color" content="#074461" />
-
-    <?php include('google-analytics.php'); ?>
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">	
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Mobile Responsive CSS -->
-    <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->
-    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 </head>
 
@@ -87,7 +44,7 @@
         <!-- CONTENT START -->
         <div class="page-content">
             <!-- INNER PAGE BANNER -->
-            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.jpg);">
+            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/1.webp);">
             	<div class="overlay-main bg-black opacity-07"></div>
                     <div class="container">
                         <div class="mt-bnr-inr-entry">
@@ -114,7 +71,7 @@
 
 
                 <!-- SECTION CONTENT START -->
-                <div class="section-full p-b80 bg-gray inner-page-padding" style="background-image:url(images/background/bg-5.png);">
+                <div class="section-full p-b80 bg-gray inner-page-padding" style="background-image:url(images/background/bg-5.webp);">
                     <div class="container-fluid">
                         <div class="section-head">
                             <div class="mt-separator-outer separator-center">

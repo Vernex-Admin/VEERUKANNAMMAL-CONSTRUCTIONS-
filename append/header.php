@@ -8,9 +8,13 @@
                             <div class="logo-header-inner logo-header-one">
                                 <a href="index.php">
                                     <div class="m-0 p-0" style="overflow: hidden;">
-                                        <img src="images/Veeru-Kannammal-Construction-Header-Logo.png" alt="VK Constructions" 
-                                        style="height: 90px; width: 160px; transform: scale(5.2); max-width: 100%;"
-                                        >
+                                        <!-- Cropped, right-sized logo (21 KB) in the same 160x90 box; no scale() hack -->
+                                        <picture>
+                                            <source type="image/webp" srcset="images/logo/vk-header-logo.webp">
+                                            <img src="images/logo/vk-header-logo.png" alt="Veeru Kannammal Construction"
+                                                width="160" height="90" fetchpriority="high" decoding="async"
+                                                style="height: 90px; width: 160px; max-width: 100%; object-fit: contain;">
+                                        </picture>
                                     </div>
                                 </a>
                             </div>

@@ -11,7 +11,7 @@
                             <div class="widget widget_about">
                                 <!-- <h4 class="widget-title">About Company</h4> -->
                                     <!-- <div style="overflow: hidden;"> -->
-                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.png" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;">
+                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.webp" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;" loading="lazy" decoding="async">
                                     <!-- </div> -->
 								<p class="max-w400">When it comes to your house, don’t mess with the rest, trust the best. Making your vision come true, that is what we do.</p>                                
                                 
@@ -64,7 +64,7 @@
                                 <div class="widget-post-bx">
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                            <img width="100" height="100" src="images/projects/alura/alura-exterior-client-photo.jpg" alt="Alura Apartments" loading="lazy" decoding="async" style="object-fit: cover;">
+                                            <img width="100" height="100" src="images/thumbs/alura-exterior-client-photo-200.webp" alt="Alura Apartments" loading="lazy" decoding="async" style="object-fit: cover;">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -79,7 +79,7 @@
                                     </div>
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-											<img width="100" height="100" src="images/gallery/ap1.jpeg" alt="Avonlia" loading="lazy" decoding="async">
+											<img width="100" height="100" src="images/gallery/ap1.webp" alt="Avonlia" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                          	<img width="100" height="100" src="images/gallery/ap2.jpeg" alt="Avance" loading="lazy" decoding="async">
+                                          	<img width="100" height="100" src="images/gallery/ap2.webp" alt="Avance" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -170,22 +170,23 @@
     </div>
  
 <!-- JAVASCRIPT  FILES ========================================= --> 
-<script src="js/jquery-3.6.1.min.js"></script><!-- JQUERY.MIN JS -->
-<script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-<script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script src="js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
-<script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script src="js/imagesloaded.pkgd.min.js"></script><!-- MASONRY  -->
-<script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script src="js/jquery.owl-filter.js"></script>
-<script src="js/custom.js?v=20261105-testimonial-loop"></script><!-- CUSTOM FUCTIONS  -->
-<script src="js/site-enhancements.js?v=20261105g"></script>
-<script src="page-speed-optimization.js" defer></script>
-<script src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
-<script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+<!-- All scripts are deferred: they download in parallel and run in this order after the page is parsed -->
+<script src="js/jquery-3.6.1.min.js" defer></script>
+<script src="js/popper.min.js" defer></script><!-- must load before bootstrap -->
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/magnific-popup.min.js" defer></script>
+<script src="js/waypoints.min.js" defer></script>
+<script src="js/counterup.min.js" defer></script>
+<script src="js/waypoints-sticky.min.js" defer></script>
+<script src="js/isotope.pkgd.min.js" defer></script>
+<script src="js/imagesloaded.pkgd.min.js" defer></script>
+<script src="js/owl.carousel.min.js" defer></script>
+<script src="js/jquery.owl-filter.js" defer></script>
+<script src="js/custom.js?v=20261110" defer></script>
+<script src="js/site-enhancements.js?v=20261110" defer></script>
+<script src="page-speed-optimization.js?v=20261110" defer></script>
+<script src="js/shortcode.js" defer></script>
+<script src="js/jquery.bgscroll.js" defer></script>
 
 
 
