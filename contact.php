@@ -62,7 +62,8 @@
     <!-- Mobile Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->`r`n    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
+    <!-- Brand Theme Skin (Primary: #074461) -->
+    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i" rel="stylesheet">  
@@ -274,7 +275,7 @@
                                                     <span class="btn-text">Send Message</span>
                                                     <i class="fa fa-paper-plane"></i>
                                                 </button>
-                                                <a class="site-button whatsapp-contact-button" id="contactWhatsAppLink" href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20your%20construction%20services.%20Please%20share%20more%20details." target="_blank" rel="noopener noreferrer">
+                                                <a class="site-button whatsapp-contact-button" id="contactWhatsAppLink" href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in your construction services. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer">
                                                     <i class="fa fa-whatsapp" aria-hidden="true"></i> Send on WhatsApp
                                                 </a>
                                             </div>
@@ -1137,7 +1138,7 @@
             const updateWhatsAppLink = function() {
                 const packageName = serviceSelect.value || 'construction services';
                 const message = `Hi, I'm interested in the ${packageName}. Please share more details.`;
-                contactWhatsAppLink.href = `https://wa.me/919500044310?text=${encodeURIComponent(message)}`;
+                contactWhatsAppLink.href = `https://wa.me/<?= VK_WHATSAPP_NUMBER; ?>?text=${encodeURIComponent(message)}`;
             };
             serviceSelect.addEventListener('change', updateWhatsAppLink);
             updateWhatsAppLink();
@@ -1185,7 +1186,7 @@
             serviceSelect.dispatchEvent(event);
 
             const whatsappMessage = `Hi, I'm interested in the ${packageName}. Please share more details.`;
-            window.open(`https://wa.me/919500044310?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
+            window.open(`https://wa.me/<?= VK_WHATSAPP_NUMBER; ?>?text=${encodeURIComponent(whatsappMessage)}`, '_blank', 'noopener,noreferrer');
             
             // Close modal
             modal.style.display = 'none';

@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; ?>
 <footer class="site-footer footer-large  footer-dark	footer-wide">
               
             <!-- FOOTER BLOCKES START -->  
@@ -19,7 +20,7 @@
                                     <li><a href="https://www.facebook.com/people/Veeru-Kannammal-Construction/61575720313613/" class="fa fa-facebook"></a></li>
                                     <li><a href="https://www.instagram.com/veeru_kannammal_construction/?igsh=OTAzdW41bXd4bGVr#https://www.instagram.com/" class="fa fa-instagram"></a></li>
                                     <li><a href="https://www.youtube.com/@VeeruKannammalConstruction" class="fa fa-youtube"></a></li>
-                                    <li><a href="https://wa.me/919500044310?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20construction%20services." class="fa fa-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"></a></li>
+                                    <li><a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'d like to know more about your construction services.'), ENT_QUOTES, 'UTF-8'); ?>" class="fa fa-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"></a></li>
                                 </ul>                                     
                             </div>
                         </div> 
@@ -63,7 +64,22 @@
                                 <div class="widget-post-bx">
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-											<img width="100" height="100" src="images/gallery/ap1.jpeg">
+                                            <img width="100" height="100" src="images/projects/alura/alura-exterior-client-photo.jpg" alt="Alura Apartments" loading="lazy" decoding="async" style="object-fit: cover;">
+                                        </div>
+                                        <div class="mt-post-info">
+                                            <div class="mt-post-header">
+                                                <h6 class="post-title"><a href="projects.php#alura-apartments">Alura Apartments</a></h6>
+                                            </div>
+                                            <div class="mt-post-meta">
+                                                <ul>
+                                                    <li class="post-author"><i class="fa fa-map-marker"></i>Valasaravakkam</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
+                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
+											<img width="100" height="100" src="images/gallery/ap1.jpeg" alt="Avonlia" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -79,7 +95,7 @@
                                     </div>
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                          	<img width="100" height="100" src="images/gallery/ap2.jpeg">
+                                          	<img width="100" height="100" src="images/gallery/ap2.jpeg" alt="Avance" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -108,7 +124,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="mt-footer-bot-center">
-                            <span class="copyrights-text">© 2025 Veeru Kannammal Constructions- Redesigned By <a style="color:white" href="https://vernex.in" target="_blank" rel="noopener"> Vernex</a>
+                            <span class="copyrights-text">© <?= date('Y'); ?> Veeru Kannammal Constructions- Redesigned By <a style="color:white" href="https://vernex.in" target="_blank" rel="noopener"> Vernex</a></span>
                         </div>
                     </div>
                 </div>
@@ -120,7 +136,7 @@
         <a
             id="vk-whatsapp-float"
             class="vk-whatsapp-float"
-            href="https://wa.me/919500044310?text=Hello%2C%20I%20visited%20the%20Veeru%20Kannammal%20Construction%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services.%20Please%20contact%20me."
+            href="<?= htmlspecialchars(vk_whatsapp_url('Hello, I visited the Veeru Kannammal Construction website and would like to know more about your services. Please contact me.'), ENT_QUOTES, 'UTF-8'); ?>"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"

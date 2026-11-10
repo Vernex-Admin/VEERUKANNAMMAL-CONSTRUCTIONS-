@@ -1,5 +1,6 @@
+<?php require_once __DIR__ . '/config.php'; ?>
  <!-- HEADER START -->
- <header class="site-header header-style-1 mobile-sider-drawer-menu">        
+ <header class="site-header header-style-1 mobile-sider-drawer-menu">
             <div class="sticky-header main-bar-wraper">
                 <div  style="border-bottom: 5px solid #074461;" class="main-bar bg-white p-0">
                     <div class="container">
@@ -15,7 +16,7 @@
                             </div>
                         </div>
                         <!-- NAV Toggle Button -->
-                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed" aria-label="Toggle navigation menu">
                             <!-- <span class="sr-only">Toggle navigation</span> -->
                             <span class="icon-bar icon-bar-first"></span>
                             <span class="icon-bar icon-bar-two"></span>

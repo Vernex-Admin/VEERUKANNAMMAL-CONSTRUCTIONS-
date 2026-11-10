@@ -67,7 +67,8 @@
     <!-- Mobile Responsive CSS -->
     <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->`r`n    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
+    <!-- Brand Theme Skin (Primary: #074461) -->
+    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
@@ -133,7 +134,7 @@
                                     <a href="https://www.veerukannammal.in/" target="_blank" rel="noopener noreferrer" aria-label="Website">
                                         <i class="fa-solid fa-globe"></i>
                                     </a>
-                                        <a href="https://wa.me/919500044310?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20construction%20services." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                        <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'d like to know more about your construction services.'), ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
                                         <i class="fa-brands fa-whatsapp"></i>
                                     </a>
                                     <a href="https://www.instagram.com/veeru_kannammal_construction/#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -154,7 +155,7 @@
                                         <span>Home - Veeru Kannammal Constructions</span>
                                     </a>
 
-                                    <a class="btn-link" href="https://wa.me/919500044310?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20construction%20services." target="_blank" rel="noopener noreferrer" role="listitem">
+                                    <a class="btn-link" href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'d like to know more about your construction services.'), ENT_QUOTES, 'UTF-8'); ?>" target="_blank" rel="noopener noreferrer" role="listitem">
                                         <i class="fa-brands fa-whatsapp"></i>
                                         <span>WhatsApp</span>
                                     </a>

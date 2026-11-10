@@ -68,7 +68,8 @@
     <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
     <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105c">
     <link rel="stylesheet" type="text/css" href="css/alura-project.css?v=20261105r">
-    <!-- Brand Theme Skin (Primary: #074461) -->`r`n    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
+    <!-- Brand Theme Skin (Primary: #074461) -->
+    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  

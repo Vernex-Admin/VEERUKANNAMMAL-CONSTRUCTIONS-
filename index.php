@@ -1066,17 +1066,17 @@
                                         <tr class="action-row">
                                             <td></td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Basic%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Basic Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Standard%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Standard Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Premium%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Premium Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>

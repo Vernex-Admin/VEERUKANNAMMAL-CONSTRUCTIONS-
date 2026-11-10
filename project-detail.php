@@ -36,7 +36,8 @@
     <!-- MAIN STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->`r`n    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
+    <!-- Brand Theme Skin (Primary: #074461) -->
+    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
@@ -139,7 +140,7 @@
                                 <div class="col-md-8">
                                     <div class="mt-box">
                                         <div class="mt-thum-bx mt-img-overlay1 mt-img-effect yt-thum-box">
-                                            <img src="../../i3.ytimg.com/vi/s3A7AK1K2hc/maxresdefault.jpg" alt="">
+                                            <img src="https://i.ytimg.com/vi/s3A7AK1K2hc/maxresdefault.jpg" alt="Project video thumbnail" loading="lazy" decoding="async">
                                             <a href="https://www.youtube.com/watch?v=s3A7AK1K2hc" class="mfp-video play-now">
                                                 <i class="icon fa fa-play"></i>
                                                 <span class="ripple"></span>
