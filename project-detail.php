@@ -1,46 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php $pageCss = ['css/magnific-popup.min.css']; include __DIR__ . '/append/head.php'; ?>
 
-	<!-- META -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
     <meta name="robots" content="" />    
     <meta name="description" content="" />
-    
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon-2.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-2.ico" />
-    
+
     <!-- PAGE TITLE HERE -->
     <title> Project detail - Veeru Kannammal Constructions </title>
-    
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-    
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-    <!-- LOADER STYLE SHEET -->
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">	
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105b">
-    <!-- Brand Theme Skin (Primary: #074461) -->`r`n    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">     
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">  
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
 </head>
 
@@ -54,7 +23,7 @@
         <!-- CONTENT START -->
         <div class="page-content">
             <!-- INNER PAGE BANNER -->
-            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/5.jpg);">
+            <div class="mt-bnr-inr overlay-wraper bg-parallax bg-top-center"  data-stellar-background-ratio="0.5"  style="background-image:url(images/banner/5.webp);">
             	<div class="overlay-main bg-black opacity-07"></div>
                 <div class="container">
                     <div class="mt-bnr-inr-entry">
@@ -87,21 +56,21 @@
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic7.jpg" alt="">
+                                            <img src="images/projects/portrait/pic7.webp" alt="" width="510" height="632" decoding="async">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic4.jpg" alt="">
+                                            <img src="images/projects/portrait/pic4.webp" alt="" loading="lazy" decoding="async" width="510" height="632">
                                         </div>
                                     </div>                        	
                                 </div>
                                 <div class="col-md-4 col-sm-4">
                                     <div class="project-detail-pic m-b30">
                                         <div class="mt-media">
-                                            <img src="images/projects/portrait/pic5.jpg" alt="">
+                                            <img src="images/projects/portrait/pic5.webp" alt="" loading="lazy" decoding="async" width="510" height="632">
                                         </div>
                                     </div>                        	
                                 </div>                                
@@ -139,7 +108,7 @@
                                 <div class="col-md-8">
                                     <div class="mt-box">
                                         <div class="mt-thum-bx mt-img-overlay1 mt-img-effect yt-thum-box">
-                                            <img src="../../i3.ytimg.com/vi/s3A7AK1K2hc/maxresdefault.jpg" alt="">
+                                            <img src="https://i.ytimg.com/vi/s3A7AK1K2hc/maxresdefault.jpg" alt="Project video thumbnail" decoding="async">
                                             <a href="https://www.youtube.com/watch?v=s3A7AK1K2hc" class="mfp-video play-now">
                                                 <i class="icon fa fa-play"></i>
                                                 <span class="ripple"></span>
@@ -177,7 +146,7 @@
             <!-- SECTION CONTENT END  -->
             
             <!-- Similar projects START -->
-            <div class="section-full p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving" style="background-image:url(images/background/bg-6.png)">
+            <div class="section-full p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving" style="background-image:url(images/background/bg-6.webp)">
                 <div class="container">
                     <!-- TITLE START -->
 					<div class="section-head">
@@ -196,7 +165,7 @@
                                     <!-- COLUMNS 1 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic4.jpg" alt="">
+                                            <img src="images/projects/square/pic4.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                         <div class="mt-info p-a30">
                                             <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Delivering architecture, planning, and design.</a></h4>
@@ -207,7 +176,7 @@
                                     <!-- COLUMNS 2 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic7.jpg" alt="">
+                                            <img src="images/projects/square/pic7.webp" alt="" width="510" height="510" decoding="async">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Capitalizing on the unique qualities of each place.</a></h4>
@@ -218,7 +187,7 @@
                                     <!-- COLUMNS 3 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic5.jpg" alt="">
+                                            <img src="images/projects/square/pic5.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Delivering architecture, planning, and design.</a></h4>
@@ -229,7 +198,7 @@
                                     <!-- COLUMNS 4 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic6.jpg" alt="">
+                                            <img src="images/projects/square/pic6.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info  p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Improving quality of life with an integrated unified.</a></h4>
@@ -240,7 +209,7 @@
                                     <!-- COLUMNS 5 -->
                                     <div class="item mt-box">
                                         <div class="mt-img-effect mt-img-overlay7">
-                                            <img src="images/projects/square/pic3.jpg" alt="">
+                                            <img src="images/projects/square/pic3.webp" alt="" loading="lazy" decoding="async" width="510" height="510">
                                        </div>
                                             <div class="mt-info p-a30">
                                                 <h4 class="m-b20 m-t0"><a href="javascript:void(0);">Unique solutions for your home through.</a></h4>

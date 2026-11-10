@@ -15809,7 +15809,6 @@ transition: all 0.5s linear;
 
 .bg-changer .section-bg {
 	opacity: 0;
-	will-change: opacity, transform;
 	transform: scale(1);
 	transition: opacity 0.5s 0.2s ease, transform 5s 0.2s ease;
 }
@@ -21340,7 +21339,7 @@ img {
     *{box-sizing:border-box}
     /* html,body{} */
     .social-media-container{
-	  background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f');
+	  background-image: url('../images/banner/5.webp'); /* local image (was a 4.8 MB hot-linked Unsplash photo) */
 	  background-size: cover;
 	  background-position: center;
       border-radius: 5%;

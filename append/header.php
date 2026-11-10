@@ -1,5 +1,6 @@
+<?php require_once __DIR__ . '/config.php'; ?>
  <!-- HEADER START -->
- <header class="site-header header-style-1 mobile-sider-drawer-menu">        
+ <header class="site-header header-style-1 mobile-sider-drawer-menu">
             <div class="sticky-header main-bar-wraper">
                 <div  style="border-bottom: 5px solid #074461;" class="main-bar bg-white p-0">
                     <div class="container">
@@ -7,15 +8,19 @@
                             <div class="logo-header-inner logo-header-one">
                                 <a href="index.php">
                                     <div class="m-0 p-0" style="overflow: hidden;">
-                                        <img src="images/Veeru-Kannammal-Construction-Header-Logo.png" alt="VK Constructions" 
-                                        style="height: 90px; width: 160px; transform: scale(5.2); max-width: 100%;"
-                                        >
+                                        <!-- Cropped, right-sized logo (21 KB) in the same 160x90 box; no scale() hack -->
+                                        <picture>
+                                            <source type="image/webp" srcset="images/logo/vk-header-logo.webp">
+                                            <img src="images/logo/vk-header-logo.png" alt="Veeru Kannammal Construction"
+                                                width="160" height="90" fetchpriority="high" decoding="async"
+                                                style="height: 90px; width: 160px; max-width: 100%; object-fit: contain;">
+                                        </picture>
                                     </div>
                                 </a>
                             </div>
                         </div>
                         <!-- NAV Toggle Button -->
-                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed" aria-label="Toggle navigation menu">
                             <!-- <span class="sr-only">Toggle navigation</span> -->
                             <span class="icon-bar icon-bar-first"></span>
                             <span class="icon-bar icon-bar-two"></span>

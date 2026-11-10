@@ -3,30 +3,49 @@
 
     const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-    /* =============================================
-       SECTION ENTRANCE ANIMATIONS
-       ============================================= */
-    function enableSectionEntrances() {
-        if (motionPreference.matches || !('IntersectionObserver' in window)) return;
+    /* Run heavy work after the next paint, so a click shows its result first (better INP). */
+    function afterNextPaint(fn) {
+        requestAnimationFrame(() => {
+            if (window.scheduler && typeof window.scheduler.yield === 'function') window.scheduler.yield().then(fn);
+            else setTimeout(fn, 0);
+        });
+    }
 
-        const targets = document.querySelectorAll(
-            '.page-content .section-head, .page-content .section-content > .row, ' +
-            '.page-content .pricing-comparison-table, .page-content .work-carousel-outer, ' +
-            '.page-content .alura-feature-lead, .page-content .alura-information-card, .page-content .alura-floorplan-card'
-        );
-        if (!targets.length) return;
-
-        document.documentElement.classList.add('motion-ready');
-        const observer = new IntersectionObserver((entries, activeObserver) => {
+    /* Owl carousels: pause autoplay while off screen, resume when visible again. */
+    function pauseOffscreenCarousels() {
+        if (!window.jQuery || !('IntersectionObserver' in window) || motionPreference.matches) return;
+        const $ = window.jQuery;
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    activeObserver.unobserve(entry.target);
-                }
+                const owl = $(entry.target).data('owl.carousel');
+                if (!owl || !owl.settings || !owl.settings.autoplay) return;
+                $(entry.target).trigger(entry.isIntersecting ? 'play.owl.autoplay' : 'stop.owl.autoplay');
             });
-        }, { rootMargin: '0px 0px -32px 0px', threshold: 0.04 });
+        }, { rootMargin: '100px 0px' });
+        document.querySelectorAll('.owl-carousel').forEach((el) => observer.observe(el));
+    }
 
-        targets.forEach((target) => observer.observe(target));
+    /* =============================================
+       HEADER — reserve its height so the page never jumps
+       ============================================= */
+    /* Sections are no longer hidden until they scroll into view (that caused flicker). */
+    function reserveHeaderSpace() {
+        const bar = document.querySelector('.site-header .sticky-header .main-bar');
+        if (!bar) return;
+        const root = document.documentElement;
+        let last = 0;
+        const measure = () => {
+            const height = Math.round(bar.getBoundingClientRect().height);
+            if (height > 0 && height !== last) {
+                last = height;
+                root.style.setProperty('--vk-header-h', height + 'px');
+            }
+        };
+        measure();
+        // border-box: padding/border changes must update the reserved height too
+        if ('ResizeObserver' in window) new ResizeObserver(measure).observe(bar, { box: 'border-box' });
+        else window.addEventListener('resize', measure, { passive: true });
+        window.addEventListener('load', measure, { once: true });
     }
 
     /* =============================================
@@ -300,7 +319,10 @@
                         if (status) status.classList.add('is-ready');
                     }, 2600);
                 } else if (dialog.dataset.walkthroughState !== 'loading') {
-                    startLoading(dialog, dialog.dataset.walkthroughState === 'failed');
+                    const retry = dialog.dataset.walkthroughState === 'failed';
+                    dialog.dataset.walkthroughState = 'loading';
+                    setStatus(dialog, 'Loading the interactive walkthrough…');
+                    afterNextPaint(() => startLoading(dialog, retry)); // open the dialog first, then load the tour
                 }
                 return;
             }
@@ -380,10 +402,10 @@
                 if (!dialog) return;
 
                 const frame = dialog.querySelector('iframe[data-src]');
-                if (frame && !frame.getAttribute('src')) frame.setAttribute('src', frame.dataset.src);
-
                 if (typeof dialog.showModal === 'function') dialog.showModal();
                 else dialog.setAttribute('open', '');
+                // Start loading the PDF after the dialog has painted
+                if (frame && !frame.getAttribute('src')) afterNextPaint(() => frame.setAttribute('src', frame.dataset.src));
                 return;
             }
 
@@ -445,8 +467,50 @@
     /* =============================================
        MAIN INIT
        ============================================= */
+    /* Alura images: open in an on-page viewer (close, prev/next, Esc) instead of a new tab */
+    function initAluraLightbox() {
+        const links = Array.from(document.querySelectorAll('.alura-image-open'));
+        if (!links.length || typeof HTMLDialogElement === 'undefined') return;
+        const dlg = document.createElement('dialog');
+        dlg.className = 'vk-lightbox';
+        dlg.setAttribute('aria-label', 'Image viewer');
+        dlg.innerHTML =
+            '<button type="button" class="vk-lb-close" aria-label="Close image"><i class="fa fa-times" aria-hidden="true"></i></button>' +
+            '<button type="button" class="vk-lb-prev" aria-label="Previous image"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>' +
+            '<img alt="">' +
+            '<button type="button" class="vk-lb-next" aria-label="Next image"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>' +
+            '<p class="vk-lb-caption"></p>';
+        document.body.appendChild(dlg);
+        const img = dlg.querySelector('img');
+        const caption = dlg.querySelector('.vk-lb-caption');
+        let current = 0;
+        const show = (n) => {
+            current = (n + links.length) % links.length;
+            const link = links[current];
+            const thumb = link.querySelector('img');
+            const figcaption = link.closest('figure') && link.closest('figure').querySelector('figcaption');
+            img.src = link.getAttribute('href');
+            img.alt = thumb ? thumb.alt : '';
+            caption.textContent = figcaption ? figcaption.textContent.trim() : '';
+        };
+        links.forEach((link, n) => link.addEventListener('click', (event) => {
+            event.preventDefault();
+            show(n);
+            dlg.showModal();
+        }));
+        dlg.querySelector('.vk-lb-close').addEventListener('click', () => dlg.close());
+        dlg.querySelector('.vk-lb-prev').addEventListener('click', () => show(current - 1));
+        dlg.querySelector('.vk-lb-next').addEventListener('click', () => show(current + 1));
+        dlg.addEventListener('click', (event) => { if (event.target === dlg) dlg.close(); });
+        dlg.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowLeft') show(current - 1);
+            if (event.key === 'ArrowRight') show(current + 1);
+        });
+    }
+
     function initialize() {
-        enableSectionEntrances();
+        reserveHeaderSpace();
+        initAluraLightbox();
         initializeTestimonialVideos();
         initializeAluraWalkthrough();
         initializeAluraBrochure();
@@ -455,16 +519,13 @@
         markActiveNavItem();
 
         window.addEventListener('load', stopAutomaticCarouselMotion, { once: true });
+        // Carousels are created by custom.js on jQuery-ready; set up the pause logic once the page has loaded
+        if (document.readyState === 'complete') pauseOffscreenCarousels();
+        else window.addEventListener('load', pauseOffscreenCarousels, { once: true });
 
         if (motionPreference.addEventListener) {
             motionPreference.addEventListener('change', (event) => {
-                if (event.matches) {
-                    stopAutomaticCarouselMotion();
-                    document.documentElement.classList.remove('motion-ready');
-                    document.querySelectorAll('.is-visible').forEach((target) => target.classList.remove('is-visible'));
-                } else {
-                    enableSectionEntrances();
-                }
+                if (event.matches) stopAutomaticCarouselMotion();
             });
         }
     }

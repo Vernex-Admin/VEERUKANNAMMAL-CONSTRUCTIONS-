@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/config.php'; ?>
 <footer class="site-footer footer-large  footer-dark	footer-wide">
               
             <!-- FOOTER BLOCKES START -->  
@@ -10,7 +11,7 @@
                             <div class="widget widget_about">
                                 <!-- <h4 class="widget-title">About Company</h4> -->
                                     <!-- <div style="overflow: hidden;"> -->
-                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.png" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;">
+                                        <img class="w-5 mb-3" src="images/Veeru-Kannammal-Construction-Footer-Logo.webp" alt="VK Constructions" style=" height: 100px ;transform: scale(1.2); transform-origin: center;" loading="lazy" decoding="async" width="705" height="559">
                                     <!-- </div> -->
 								<p class="max-w400">When it comes to your house, don’t mess with the rest, trust the best. Making your vision come true, that is what we do.</p>                                
                                 
@@ -19,7 +20,7 @@
                                     <li><a href="https://www.facebook.com/people/Veeru-Kannammal-Construction/61575720313613/" class="fa fa-facebook"></a></li>
                                     <li><a href="https://www.instagram.com/veeru_kannammal_construction/?igsh=OTAzdW41bXd4bGVr#https://www.instagram.com/" class="fa fa-instagram"></a></li>
                                     <li><a href="https://www.youtube.com/@VeeruKannammalConstruction" class="fa fa-youtube"></a></li>
-                                    <li><a href="https://wa.me/919500044310?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20your%20construction%20services." class="fa fa-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"></a></li>
+                                    <li><a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'d like to know more about your construction services.'), ENT_QUOTES, 'UTF-8'); ?>" class="fa fa-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp"></a></li>
                                 </ul>                                     
                             </div>
                         </div> 
@@ -63,7 +64,22 @@
                                 <div class="widget-post-bx">
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-											<img width="100" height="100" src="images/gallery/ap1.jpeg">
+                                            <img width="100" height="100" src="images/thumbs/alura-exterior-client-photo-200.webp" alt="Alura Apartments" loading="lazy" decoding="async" style="object-fit: cover;">
+                                        </div>
+                                        <div class="mt-post-info">
+                                            <div class="mt-post-header">
+                                                <h6 class="post-title"><a href="projects.php#alura-apartments">Alura Apartments</a></h6>
+                                            </div>
+                                            <div class="mt-post-meta">
+                                                <ul>
+                                                    <li class="post-author"><i class="fa fa-map-marker"></i>Valasaravakkam</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
+                                        <div class="mt-post-date text-center text-uppercase text-white p-tb5">
+											<img width="100" height="100" src="images/gallery/ap1.webp" alt="Avonlia" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -79,7 +95,7 @@
                                     </div>
                                     <div class="bdr-light-blue widget-post clearfix  bdr-b-1 m-b10 p-b10">
                                         <div class="mt-post-date text-center text-uppercase text-white p-tb5">
-                                          	<img width="100" height="100" src="images/gallery/ap2.jpeg">
+                                          	<img width="100" height="100" src="images/gallery/ap2.webp" alt="Avance" loading="lazy" decoding="async">
                                         </div>
                                         <div class="mt-post-info">
                                             <div class="mt-post-header">
@@ -108,7 +124,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="mt-footer-bot-center">
-                            <span class="copyrights-text">© 2025 Veeru Kannammal Constructions- Redesigned By <a style="color:white" href="https://vernex.in" target="_blank" rel="noopener"> Vernex</a>
+                            <span class="copyrights-text">© <?= date('Y'); ?> Veeru Kannammal Constructions- Redesigned By <a style="color:white" href="https://vernex.in" target="_blank" rel="noopener"> Vernex</a></span>
                         </div>
                     </div>
                 </div>
@@ -120,27 +136,11 @@
         <a
             id="vk-whatsapp-float"
             class="vk-whatsapp-float"
-            href="https://wa.me/919500044310?text=Hello%2C%20I%20visited%20the%20Veeru%20Kannammal%20Construction%20website%20and%20would%20like%20to%20know%20more%20about%20your%20services.%20Please%20contact%20me."
+            href="<?= htmlspecialchars(vk_whatsapp_url('Hello, I visited the Veeru Kannammal Construction website and would like to know more about your services. Please contact me.'), ENT_QUOTES, 'UTF-8'); ?>"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Chat with us on WhatsApp"
             title="Enquire on WhatsApp"
-            style="
-                position: fixed !important;
-                bottom: 24px !important;
-                right: 20px !important;
-                z-index: 99999 !important;
-                display: flex !important;
-                align-items: center !important;
-                justify-content: center !important;
-                width: 48px !important;
-                height: 48px !important;
-                border-radius: 50% !important;
-                background-color: #25D366 !important;
-                color: #ffffff !important;
-                text-decoration: none !important;
-                box-shadow: 0 4px 14px rgba(37,211,102,0.45), 0 2px 6px rgba(0,0,0,0.2) !important;
-            "
         >
             <!-- Recognizable WhatsApp SVG icon (white, inline) -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="26" height="26" fill="#ffffff" aria-hidden="true" focusable="false" style="display:block;flex-shrink:0;">
@@ -154,22 +154,20 @@
     </div>
  
 <!-- JAVASCRIPT  FILES ========================================= --> 
-<script src="js/jquery-3.6.1.min.js"></script><!-- JQUERY.MIN JS -->
-<script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-<script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-<script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script src="js/waypoints-sticky.min.js"></script><!-- COUNTERUP JS -->
-<script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script src="js/imagesloaded.pkgd.min.js"></script><!-- MASONRY  -->
-<script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script src="js/jquery.owl-filter.js"></script>
-<script src="js/custom.js?v=20261105-testimonial-loop"></script><!-- CUSTOM FUCTIONS  -->
-<script src="js/site-enhancements.js?v=20261105g"></script>
-<script src="page-speed-optimization.js" defer></script>
-<script src="js/shortcode.js"></script><!-- SHORTCODE FUCTIONS  -->
-<script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+<!-- All scripts are deferred: they download in parallel and run in this order after the page is parsed.
+     Not loaded (coverage-checked: no page uses them): popper, isotope, imagesloaded, owl-filter. -->
+<script src="js/jquery-3.6.1.min.js" defer></script>
+<script src="js/bootstrap.min.js" defer></script>
+<script src="js/magnific-popup.min.js" defer></script>
+<script src="js/waypoints.min.js" defer></script>
+<script src="js/counterup.min.js" defer></script>
+<script src="js/waypoints-sticky.min.js" defer></script>
+<script src="js/owl.carousel.min.js" defer></script>
+<script src="js/custom.js?v=20261110i" defer></script>
+<script src="js/site-enhancements.js?v=20261110i" defer></script>
+<script src="page-speed-optimization.js?v=20261110" defer></script>
+<script src="js/shortcode.js" defer></script>
+<script src="js/jquery.bgscroll.js?v=20261110i" defer></script>
 
 
 

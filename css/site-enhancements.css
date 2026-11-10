@@ -1,7 +1,9 @@
 /* Lightweight interaction and accessibility improvements */
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 96px;
+    /* No smooth scroll-behavior on html: it fought the JS/anchor scrolling and the sticky header.
+       Anchors land below the fixed header via scroll-padding instead. */
+    scroll-behavior: auto;
+    scroll-padding-top: var(--vk-header-h, 95px);
 }
 
 /* =============================================
@@ -13,29 +15,32 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth page entrance — avoids sudden layout jump */
-.page-content {
-    animation: vk-page-in 220ms ease-out both;
-}
-
-@keyframes vk-page-in {
-    from { opacity: 0; transform: translateY(6px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
+/* (Removed the .page-content fade-in: it hid every page for a moment on each navigation.) */
 
 /* =============================================
-   HEADER — prevent flicker & layout shift
+   HEADER — sticky without layout jumps
    ============================================= */
-.site-header {
-    /* Prevent height collapse during load */
-    will-change: transform;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+/* No transform / will-change on .site-header: either one turns it into the containing
+   block for the position:fixed .main-bar, so the "sticky" bar scrolled away with the page. */
+
+/* Reserve the header's space so content never jumps when the bar turns fixed.
+   style.css forces .sticky-wrapper { height: auto !important }, which collapsed the
+   placeholder to 0. site-enhancements.js keeps --vk-header-h equal to the bar's height. */
+.site-header .sticky-wrapper {
+    min-height: var(--vk-header-h, 95px);
+}
+
+/* One header height everywhere, from first paint: style.css gave the bar 5px padding at some
+   widths until the sticky wrapper existed (then 0), and animated "all" properties. */
+.site-header .main-bar {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    transition: none;
 }
 
 .sticky-header {
-    /* Smooth sticky transition instead of jumping */
-    transition: box-shadow 200ms ease;
+    /* The sticky header only toggles a class; nothing animates layout or shadows */
+    transition: none;
 }
 
 .sticky-header.is-fixed {
@@ -48,27 +53,69 @@ body {
     transition: color 160ms ease !important;
 }
 
-/* Active page indicator underline */
+/* Current page */
 .header-nav .nav > li.active > a {
     color: #074461;
     font-weight: 600;
 }
 
-.header-nav .nav > li > a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    right: 50%;
-    height: 2px;
-    background: #074461;
-    transition: left 160ms ease, right 160ms ease;
+/* =============================================
+   HEADER NAV — one underline (current page only), hover = colour only,
+   and the same box for every link in every state so the header never changes height.
+   Overrides style.css (4px border + 10px padding on the active link, a hover bar on
+   li::after, and the active border disappearing while the menu is hovered).
+   ============================================= */
+.site-header .header-nav ul.nav > li::after,
+.site-header .header-nav ul.nav > li:hover::after {
+    content: none;
+    display: none;
 }
 
-.header-nav .nav > li.active > a::after,
-.header-nav .nav > li > a:hover::after {
-    left: 0;
-    right: 0;
+.site-header .header-nav ul.nav > li > a::after {
+    content: none;
+}
+
+@media (min-width: 992px) {
+    .site-header .header-nav ul.nav > li > a,
+    .site-header .header-nav ul.nav:hover > li.active > a,
+    .site-header .header-nav ul.nav > li.active:hover > a {
+        padding: 35px 12px;
+        border-bottom: 0;
+        background-color: transparent;
+    }
+
+    /* The only underline: under the current page, where the old border sat */
+    .site-header .header-nav ul.nav > li.active > a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 21px;
+        height: 4px;
+        background: #074461;
+    }
+
+    /* Hover / keyboard focus: a light colour change, nothing else */
+    .site-header .header-nav ul.nav > li:not(.active):hover > a,
+    .site-header .header-nav ul.nav > li:not(.active) > a:focus-visible {
+        color: #3d7fa3;
+    }
+}
+
+@media (max-width: 991px) {
+    /* Drawer menu: the current page keeps its blue highlight; hover/tap is a light tint only */
+    .site-header .header-nav ul.nav > li:not(.active) > a:hover,
+    .site-header .header-nav ul.nav > li:not(.active) > a:focus-visible {
+        background-color: #eef4f7 !important;
+        color: #074461 !important;
+    }
+
+    /* Same 1px divider in every state (style.css removed it on the active/hovered link,
+       so items below moved by 1px between pages and on tap) */
+    .site-header .header-nav ul.nav > li.active > a,
+    .site-header .header-nav ul.nav > li > a:hover {
+        border-bottom: 1px solid transparent !important;
+    }
 }
 
 /* Mobile nav — smooth slide in/out */
@@ -139,8 +186,20 @@ body {
 /* =============================================
    SCROLL-TO-TOP BUTTON — smooth fade
    ============================================= */
+/* Shown/hidden by toggling .vk-shown (custom.js); fades with opacity only */
 button.scroltop {
-    transition: opacity 300ms ease, transform 300ms ease !important;
+    display: block !important;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 300ms ease, visibility 0s linear 300ms !important;
+}
+
+button.scroltop.vk-shown {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 300ms ease, visibility 0s !important;
 }
 
 /* =============================================
@@ -163,7 +222,7 @@ button.scroltop {
     text-decoration: none !important;
     box-shadow: 0 4px 14px rgba(37, 211, 102, 0.45), 0 2px 6px rgba(0,0,0,0.2) !important;
     animation: vk-wa-enter 300ms ease-out both !important;
-    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease !important;
+    transition: transform 200ms ease, opacity 200ms ease !important;
     cursor: pointer !important;
 }
 
@@ -237,19 +296,41 @@ button.scroltop {
     }
 }
 
+/* Phones: 52px WhatsApp button 16px from the edges; scroll-to-top centred above it;
+   extra room at the end of the page so the button never covers the last line of text. */
+@media (max-width: 576px) {
+    #vk-whatsapp-float,
+    .vk-whatsapp-float {
+        width: 52px !important;
+        height: 52px !important;
+        right: 16px !important;
+        bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    #vk-whatsapp-float svg,
+    .vk-whatsapp-float svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
+
+    button.scroltop {
+        right: 27px !important;
+        bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+
+    .site-footer .footer-bottom {
+        padding-bottom: calc(84px + env(safe-area-inset-bottom, 0px)) !important;
+    }
+}
+
 .site-button,
 .modern-submit-btn,
 .testimonial-card,
 .work-box,
 .service-box,
 .mt-icon-box-wraper {
-    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease,
-        box-shadow 180ms ease, transform 180ms ease;
-}
-
-.header-nav .nav > li > a:hover,
-.header-nav .nav > li > a:focus-visible {
-    color: #074461;
+    /* hover: transform/opacity only (shadow changes no longer animate frame by frame) */
+    transition: transform 200ms ease, opacity 200ms ease;
 }
 
 .site-button:hover,
@@ -495,28 +576,7 @@ button.scroltop {
     margin-left: 10px;
 }
 
-.motion-ready .page-content .section-head,
-.motion-ready .page-content .section-content > .row,
-.motion-ready .page-content .pricing-comparison-table,
-.motion-ready .page-content .work-carousel-outer,
-.motion-ready .page-content .alura-feature-lead,
-.motion-ready .page-content .alura-information-card,
-.motion-ready .page-content .alura-floorplan-card {
-    opacity: 0;
-    transform: translateY(10px);
-    transition: opacity 220ms ease-out, transform 220ms ease-out;
-}
-
-.motion-ready .page-content .section-head.is-visible,
-.motion-ready .page-content .section-content > .row.is-visible,
-.motion-ready .page-content .pricing-comparison-table.is-visible,
-.motion-ready .page-content .work-carousel-outer.is-visible,
-.motion-ready .page-content .alura-feature-lead.is-visible,
-.motion-ready .page-content .alura-information-card.is-visible,
-.motion-ready .page-content .alura-floorplan-card.is-visible {
-    opacity: 1;
-    transform: none;
-}
+/* (Removed the scroll-in section animations: sections were hidden until they scrolled into view.) */
 
 @media (max-width: 767px) {
     html {
@@ -605,5 +665,66 @@ button.scroltop {
         animation-iteration-count: 1 !important;
         scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+    }
+}
+
+/* =============================================
+   PERFORMANCE — scrolling & paint
+   ============================================= */
+/* No fixed-background parallax on phones/tablets: it repaints the whole banner on every scroll */
+@media (max-width: 991px) {
+    html .bg-parallax,
+    html .bg-fixed,
+    html #bg {
+        background-attachment: scroll !important;
+    }
+}
+
+/* Phones: the theme turns every link into a shrink-to-fit "inline-flex" box (tap-target rule), so a link
+   around a carousel/gallery photo is only 44px wide until the photo loads; then the photo jumps to full size
+   and pushes the page down. These links take the full width instead, so the photo's space is reserved up front. */
+@media (max-width: 767px) {
+    .owl-carousel .item > a,
+    .mt-img-effect > a {
+        width: 100%;
+    }
+}
+
+/* Long sections below the fold: the browser skips rendering them until they come close.
+   "auto" remembers the real height once rendered, so the page and scrollbar don't jump. */
+.site-footer,
+.vk-cv {
+    content-visibility: auto;
+    contain-intrinsic-height: auto 605px;
+}
+
+/* content-box heights (section padding is added on top) */
+.vk-cv.testimonials-wrap { contain-intrinsic-height: auto 1095px; }
+.site-footer { contain-intrinsic-height: auto 480px; }
+
+@media (max-width: 991px) {
+    .vk-cv { contain-intrinsic-height: auto 560px; }
+    .vk-cv.testimonials-wrap { contain-intrinsic-height: auto 908px; }
+    .site-footer { contain-intrinsic-height: auto 1020px; }
+}
+
+@media (max-width: 576px) {
+    .vk-cv { contain-intrinsic-height: auto 593px; }
+    .vk-cv.testimonials-wrap { contain-intrinsic-height: auto 1077px; }
+    .site-footer { contain-intrinsic-height: auto 1782px; }
+}
+
+/* Mobile menu drawer: slide with transform (compositor) instead of animating `left` (layout every frame).
+   Same width, timing and look as before. */
+@media (max-width: 991px) {
+    .header-style-1.mobile-sider-drawer-menu .header-nav {
+        left: 0;
+        transform: translateX(-100%);
+        transition: transform 0.5s linear;
+    }
+
+    .header-style-1.mobile-sider-drawer-menu.active .header-nav {
+        left: 0;
+        transform: none;
     }
 }

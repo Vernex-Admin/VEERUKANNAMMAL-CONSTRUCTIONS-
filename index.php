@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <?php $pageCss = ['css/alura-project.css']; $pagePreloadImage = 'images/projects/alura/alura-exterior-client-photo.jpg'; include __DIR__ . '/append/head.php'; ?>
 
-	<!-- META -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="Veeru Kannammal Construction, best construction company Chennai, #1 builders Chennai, VK construction Chennai, top construction contractors Chennai, house construction Chennai, building contractors Chennai, residential construction Chennai, commercial construction Chennai, home builders Chennai, construction company Medavakkam, construction services Chennai, building construction Chennai, renovation contractors Chennai, interior construction Chennai, construction packages Chennai, affordable construction Chennai, quality construction Chennai, trusted builders Chennai, construction estimate Chennai, house builders near me, construction contractors near me, Chennai construction services, building renovation Chennai, villa construction Chennai, apartment construction Chennai, construction cost per sqft Chennai, construction company Tamil Nadu, best builders Tamil Nadu, construction in OMR, construction in ECR, construction Velachery, construction Pallikaranai, construction Sholinganallur, construction Tambaram, construction Chromepet, house construction cost Chennai, building permits Chennai, construction consultation Chennai, architectural services Chennai, structural construction Chennai, civil construction Chennai, construction management Chennai, construction planning Chennai, construction design Chennai, custom home builders Chennai, luxury construction Chennai, budget construction Chennai, construction financing Chennai, construction insurance Chennai, green construction Chennai, sustainable building Chennai, smart homes Chennai, modern construction Chennai, traditional construction Chennai, concrete construction Chennai, steel construction Chennai, construction materials Chennai, construction equipment Chennai, construction workers Chennai, construction supervision Chennai, construction quality control Chennai, construction safety Chennai, construction timeline Chennai, construction warranty Chennai, construction after sales service Chennai, 24/7 construction support Chennai" />
     <meta name="author" content="Veeru Kannammal Construction - Premier Construction Company Chennai" />
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />    
@@ -62,16 +60,6 @@
     <link rel="alternate" href="https://www.veerukannammal.in/" />
     <link rel="alternate" type="application/rss+xml" title="Veeru Kannammal Construction News" href="https://veerukannammal.in/feed.xml" />
 
-    <!-- FAVICONS ICON -->
-    <link rel="icon" href="images/favicon-2.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon-3.ico" />
-    <link rel="icon" type="image/png" sizes="16x16" href="images/vk-favicon.png?v=2" />
-    <link rel="icon" type="image/png" sizes="192x192" href="images/vk-favicon.png?v=2" />
-    <link rel="icon" type="image/png" sizes="512x512" href="images/vk-favicon.png?v=2" />
-    <link rel="apple-touch-icon" sizes="180x180" href="images/vk-favicon.png?v=2" />
-    <link rel="manifest" href="site.webmanifest?v=2" />
-    <meta name="theme-color" content="#074461" />
-    
     <!-- Open Graph Image for social media and search engines -->
     <meta property="og:image" content="https://vkconstruction.in/images/Veeru-Kannammal-Construction-Header-Logo.png" />
     <meta property="og:image:width" content="1200" />
@@ -81,40 +69,6 @@
     <!-- PAGE TITLE HERE -->
     <title> Veeru Kannammal Construction | #1 Construction Company Chennai | Best Builders & Contractors in Tamil Nadu | Expert Home Builders</title>
 
-    <!-- MOBILE SPECIFIC -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=yes, maximum-scale=5">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="theme-color" content="#074461">
-    <meta name="format-detection" content="telephone=yes">
-
-    <!-- BOOTSTRAP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <!-- FONTAWESOME STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/fontawesome/css/font-awesome.min.css" />
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> -->
-    <!-- OWL CAROUSEL STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-    <!-- MAGNIFIC POPUP STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-    <!-- FLATICON STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">	
-    <!-- MAIN STYLE SHEET -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Mobile Responsive CSS -->
-    <link rel="stylesheet" type="text/css" href="css/mobile-responsive.css">
-    <link rel="stylesheet" type="text/css" href="css/site-enhancements.css?v=20261105c">
-    <link rel="stylesheet" type="text/css" href="css/alura-project.css?v=20261105k">
-    <!-- Brand Theme Skin (Primary: #074461) -->
-    <link rel="stylesheet" class="skin" type="text/css" href="css/skin/skin-5.css?v=20261105">
-
-    <!-- Google Fonts with display=swap for performance -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">  
-	<link href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-
-    <!-- Google Analytics -->
-    <?php include('google-analytics.php'); ?>
 
     <!-- Enhanced Local Business Schema -->
     <script type="application/ld+json">
@@ -544,12 +498,12 @@
                         <!-- <div class="section-content"> -->
                             <div class="section-content mt-4 p-tb10">
                                 <div class="owl-carousel home-client-carousel-2 owl-theme">
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w1.png" alt=""></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w2.png" alt=""></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w3.png" alt=""></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w4.png" alt=""></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w5.png" alt=""></a></div>
-                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w6.png" alt=""></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w1.webp" alt="" loading="lazy" decoding="async" width="335" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w2.webp" alt="" loading="lazy" decoding="async" width="440" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w3.webp" alt="" loading="lazy" decoding="async" width="416" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w4.webp" alt="" loading="lazy" decoding="async" width="414" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w5.webp" alt="" loading="lazy" decoding="async" width="307" height="230"></a></div>
+                                    <div  class="item"><a href="about.php"><img src="images/client-logo/w6.webp" alt="" loading="lazy" decoding="async" width="409" height="230"></a></div>
                                 </div>
                             </div>
                         <!-- </div> -->
@@ -557,7 +511,7 @@
                 </div>
             </div>
             <!-- OUR SPECIALLIZATION START -->
-            <div class="section-full mobile-page-padding our-speci_wrap bg-white  p-t80 p-b30 bg-repeat square_shape1" style="background-image:url(images/background/bg-5.png);">
+            <div class="section-full mobile-page-padding our-speci_wrap bg-white  p-t80 p-b30 bg-repeat square_shape1" style="background-image:url(images/background/bg-5.webp);">
 				<div class="container">
                     <!-- IMAGE CAROUSEL START -->
                     <div class="section-content">
@@ -565,7 +519,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6  m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic1.jpg" alt="VK Construction residential building project in Chennai - Quality construction services by Veeru Kannammal Construction" />
+                                    <img src="images/pic1.webp" alt="VK Construction residential building project in Chennai - Quality construction services by Veeru Kannammal Construction" loading="lazy" decoding="async" width="1002" height="1500" />
                                     <div class="figcaption">
                                         <h4>Construction</h4>
                                         <p>Engineering your dreams with us.</p>
@@ -579,7 +533,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6 m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic2.jpg" alt="VK Construction renovation and remodeling services in Chennai - Professional interior and exterior upgrades" />
+                                    <img src="images/pic2.webp" alt="VK Construction renovation and remodeling services in Chennai - Professional interior and exterior upgrades" loading="lazy" decoding="async" width="1067" height="1600" />
                                     <div class="figcaption">
                                         <h4>Renovation</h4>
                                         <p>Dazzling Design.</p>
@@ -592,7 +546,7 @@
                         	<div class="col-xl-3 col-lg-4 col-md-6 m-b30">
 
                                 <div class="image-effect-one hover-shadow">
-                                    <img src="images/pic3.jpg" alt="VK Construction consultation and design services - Expert construction planning and architectural guidance in Chennai" />
+                                    <img src="images/pic3.webp" alt="VK Construction consultation and design services - Expert construction planning and architectural guidance in Chennai" loading="lazy" decoding="async" width="1000" height="1500" />
                                     <div class="figcaption site-bg-dark">
                                         <h4>Consultation</h4>
                                         <p>Thoughful Insights</p>
@@ -619,7 +573,7 @@
             <!-- OUR SPECIALLIZATION END --> 
 
             <!-- ABOUT COMPANY START -->
-            <div class="section-full  mobile-page-padding p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving" style="background-image:url(images/background/bg-6.png)">
+            <div class="section-full  mobile-page-padding p-t80 p-b30 site-bg-dark bg-repeat square_shape2 bg-moving" style="background-image:url(images/background/bg-6.webp)">
                 <div class="container">
                     <!-- TITLE START -->
 					<div class="section-head">
@@ -638,19 +592,19 @@
                                         <!-- COLUMNS 1 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap1.jpeg" alt=""></a>
+                                                <a href="about.php"><img src="images/gallery/ap1.webp" alt="" loading="lazy" decoding="async" width="1280" height="1280"></a>
                                            </div>
                                         </div>
                                         <!-- COLUMNS 2 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap2.jpeg" alt=""></a>
+                                                <a href="about.php"><img src="images/gallery/ap2.webp" alt="" loading="lazy" decoding="async" width="1080" height="1074"></a>
                                            </div>
                                         </div>
                                         <!-- COLUMNS 3 --> 
                                         <div class="item ">
                                             <div class="mt-img-effect zoom-slow">
-                                                <a href="about.php"><img src="images/gallery/ap3.jpeg" alt=""></a>
+                                                <a href="about.php"><img src="images/gallery/ap3.webp" alt="" loading="lazy" decoding="async" width="1280" height="1280"></a>
                                            </div>
                                         </div>
 
@@ -674,7 +628,7 @@
             </div>   
             <!-- ABOUT COMPANY END -->
 <!-- PRICING COMPARISON SECTION START -->
-            <div class="section-full text-center bg-gray bg-no-repeat p-t80 p-b50 bg-top-right mobile-page-padding our-pricing-wrap" style="background-image:url(images/background/bg-4.png)">
+            <div class="section-full text-center bg-gray bg-no-repeat p-t80 p-b50 bg-top-right mobile-page-padding our-pricing-wrap" style="background-image:url(images/background/bg-4.webp)">
                 <div class="container">
 
                     <!-- TITLE START -->
@@ -1066,17 +1020,17 @@
                                         <tr class="action-row">
                                             <td></td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Basic%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Basic Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Standard%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Standard Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>
                                             <td>
-                                                <a href="https://wa.me/919500044310?text=Hi%2C%20I%27m%20interested%20in%20the%20Premium%20Construction%20Package.%20Please%20share%20more%20details." class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
+                                                <a href="<?= htmlspecialchars(vk_whatsapp_url('Hi, I\'m interested in the Premium Construction Package. Please share more details.'), ENT_QUOTES, 'UTF-8'); ?>" class="site-button btn-effect" target="_blank" rel="noopener noreferrer">
                                                     Get Quote
                                                 </a>
                                             </td>
@@ -1092,7 +1046,7 @@
             <!-- PRICING COMPARISON SECTION END -->
 
             <!-- CLIENT TESTIMONIALS SECTION START -->
-            <div class="section-full mobile-page-padding p-t80 p-b80 bg-gray testimonials-wrap" style="background-image:url(images/background/bg-4.png); background-repeat: no-repeat; background-position: right center;">
+            <div class="section-full mobile-page-padding p-t80 p-b80 bg-gray testimonials-wrap vk-cv" style="background-image:url(images/background/bg-4.webp); background-repeat: no-repeat; background-position: right center;">
                 <div class="container">
                     <!-- TITLE START -->
                     <div class="section-head text-center">
@@ -1114,13 +1068,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-1-poster.jpg" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-1-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 1">
                                                     <source data-src="videos/Testimonial-Video-1.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 1">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-1-poster.jpg" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-1-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/lV55OMs0hWM?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 1 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1134,13 +1088,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-2-poster.jpg" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-2-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 2">
                                                     <source data-src="videos/Testimonial-Video-2.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 2">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-2-poster.jpg" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-2-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/_oAMthHscDk?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 2 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1154,13 +1108,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-3-poster.jpg" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-3-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 3">
                                                     <source data-src="videos/Testimonial-Video-3.mp4?v=20261105-duration-fix" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 3">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-3-poster.jpg" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-3-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 3 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1174,13 +1128,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-4-poster.jpg" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-4-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 4">
                                                     <source data-src="videos/Testimonial-Video-4.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 4">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-4-poster.jpg" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-4-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 4 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1194,13 +1148,13 @@
                                     <div class="testimonial-card bg-white">
                                         <div class="video-container">
                                             <div class="video-wrapper">
-                                                <img class="video-bg" src="images/testimonials/client-video-5-poster.jpg" alt="" aria-hidden="true" loading="lazy">
+                                                <img class="video-bg" src="images/testimonials/client-video-5-poster.webp" alt="" aria-hidden="true" loading="lazy" width="640" height="1138" decoding="async">
                                                 <video class="video-content" controls preload="none" playsinline muted loop aria-label="Client testimonial video 5">
                                                     <source data-src="videos/Testimonial-Video-5.mp4" type="video/mp4">
                                                     Your browser does not support HTML5 video.
                                                 </video>
                                                 <button class="testimonial-play-button" type="button" aria-label="Play client testimonial video 5">
-                                                    <img class="testimonial-poster" src="images/testimonials/client-video-5-poster.jpg" alt="" loading="lazy">
+                                                    <img class="testimonial-poster" src="images/testimonials/client-video-5-poster.webp" alt="" loading="lazy" width="640" height="1138" decoding="async">
                                                     <span class="testimonial-play-icon" aria-hidden="true"><i class="fa fa-play"></i></span>
                                                 </button>
                                                 <a class="testimonial-youtube-link" href="https://www.youtube.com/embed/zNBtvXFnDhA?controls=1&modestbranding=1&rel=0&showinfo=0" target="_blank" rel="noopener noreferrer" aria-label="Watch client testimonial video 5 on YouTube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
@@ -1248,7 +1202,7 @@
                                   <!--  <div class="author-info p-t20">
 
                                         <div class="author-signature">
-                                            <img src="images/Signature%2bBlack.png" alt="Signature" width="150">
+                                            <img src="images/Signature%2BBlack.webp" alt="Signature" width="150" loading="lazy" decoding="async">
                                         </div>
                                         <div class="author-name">
                                             <h4 class="m-t0">David Houkr</h4>
@@ -1280,23 +1234,23 @@
                                         </div>
 
                                       <!-- <div class="p-2">
-                                      <img src="images/icici.jpeg" >
+                                      <img src="images/icici.webp" loading="lazy" decoding="async" width="1200" height="242" >
                                       </div>
                                        <div class="p-2">
-                                      <img src="images/sbi.jpeg" >
+                                      <img src="images/sbi.jpeg" loading="lazy" decoding="async" width="644" height="168" >
                                       </div>
                                        <div class="p-2">
-                                      <img src="images/hdfc.jpeg" >
+                                      <img src="images/hdfc.webp" loading="lazy" decoding="async" width="1600" height="277" >
                                       </div> -->
                                       <div class="d-flex flex-wrap justify-content-center">
                                         <div class="p-2">
-                                            <img src="images/icici.jpeg" class="img-fluid" style="max-width: 200px;" alt="ICICI">
+                                            <img src="images/icici.webp" class="img-fluid" style="max-width: 200px;" alt="ICICI" loading="lazy" decoding="async" width="1200" height="242">
                                         </div>
                                         <div class="p-2">
-                                            <img src="images/sbi.jpeg" class="img-fluid" style="max-width: 200px;" alt="SBI">
+                                            <img src="images/sbi.jpeg" class="img-fluid" style="max-width: 200px;" alt="SBI" loading="lazy" decoding="async" width="644" height="168">
                                         </div>
                                         <div class="p-2">
-                                            <img src="images/hdfc.jpeg" class="img-fluid" style="max-width: 200px;" alt="HDFC">
+                                            <img src="images/hdfc.webp" class="img-fluid" style="max-width: 200px;" alt="HDFC" loading="lazy" decoding="async" width="1600" height="277">
                                         </div>
                                         </div>
 
@@ -1312,7 +1266,7 @@
             <!-- OUR VALUE END -->            
 
             <!-- OUR MISSION START -->
-            <div class="section-full mobile-page-padding mission-outer-section  p-t80 p-b30 bg-gray bg-no-repeat bg-right-center" style="background-image:url(images/left-men.png), url(images/background/bg-4.png); ">
+            <div class="section-full mobile-page-padding mission-outer-section  p-t80 p-b30 bg-gray bg-no-repeat bg-right-center" style="background-image:url(images/left-men.webp), url(images/background/bg-4.webp); ">
 				<div class="section-content">
                     <div class="container">
                         <!-- TITLE START -->
@@ -1327,7 +1281,7 @@
 
                         <div class="row">
                         	<div class="col-lg-4 col-md-6">
-                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.png);">
+                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.webp);">
                                 	<h3 class="m-t0"><span class="font-weight-100"> Site Areas</span><br> Why Choose Us</h3>
                                     <p>Unlock your potential and build your dream career in the heart of innovation and
 excellence.</p>
@@ -1346,11 +1300,11 @@ excellence.</p>
                             </div>
 
                             <div class="col-lg-4 col-md-6">
-                                <div class="mission-mid bg-no-repeat bg-cover m-b30" style="background-image:url(images/mission.jpeg);"></div>
+                                <div class="mission-mid bg-no-repeat bg-cover m-b30" style="background-image:url(images/mission-jpeg.webp);"></div>
                             </div>
 
                             	<div class="col-lg-4 col-md-6">
-                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.png);">
+                            	<div class="mission-left bg-white m-b30 p-a30 bg-no-repeat bg-bottom-left" style="background-image:url(images/background/bg-site.webp);">
                                 	<h3 class="m-t0"><span class="font-weight-100"> Our Goals</span><br> Why Choose Us</h3>
                                     <p>Customer satisfaction is our top most priority. We started this company after listening to multiple customers pain points. We decided to solve it and provide best quality service.</p>
                                     <ul class="list-angle-right anchor-line">
@@ -1377,7 +1331,7 @@ excellence.</p>
             <!-- OUR SERVICES START -->
             <div class="section-full mobile-page-padding our-service-wrap  p-b50  square_shape2">
 				<div class="section-content">
-                    <div class="Service-half-top p-t80  site-bg-dark bg-moving" style="background-image:url(images/background/bg-6.png)" >
+                    <div class="Service-half-top p-t80  site-bg-dark bg-moving" style="background-image:url(images/background/bg-6.webp)" >
                         <div class="container">
                             <!-- TITLE START -->
                             <div class="section-head text-white"> 
@@ -1400,7 +1354,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">1</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/crane-1.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/crane-1.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Residential <br> Construction</h4>
@@ -1418,7 +1372,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">2</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/renovation.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/renovation.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Commercial  <br>Construction</h4>
@@ -1436,7 +1390,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">3</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/toolbox.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/toolbox.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Renovation <br> Remodeling</h4>
@@ -1454,7 +1408,7 @@ excellence.</p>
                                         <div class="relative icon-count-2 bg-gray p-a30 p-tb50">
                                             <span class="icon-count-number">4</span>
                                             <div class="icon-md inline-icon m-b15 site-text-primary scale-in-center">
-                                                <span class="icon-cell"><img src="images/icon/compass.png" alt=""></span>
+                                                <span class="icon-cell"><img src="images/icon/compass.webp" alt="" loading="lazy" decoding="async" width="512" height="512"></span>
                                             </div>
                                             <div class="icon-content">
                                                 <h4 class="mt-tilte m-b25">Consultation And Design</h4>
@@ -1474,7 +1428,7 @@ excellence.</p>
             <!-- OUR SERVICES  END -->
 
             <!-- CALL US SECTION START -->
-            <div class="section-full mobile-page-padding p-tb80 overlay-wraper bg-cover bg-center" style="background-image:url(images/background/bg-1.jpg)">
+            <div class="section-full mobile-page-padding p-tb80 overlay-wraper bg-cover bg-center" style="background-image:url(images/background/bg-1.webp)">
             	<div class="overlay-main site-bg-primary opacity-07"></div>
                 <div class="container">
 
@@ -1493,7 +1447,7 @@ excellence.</p>
 
 
              <!--TESTIMONIALS SECTION START -->
-            <div class="section-full mobile-page-padding p-t80 p-b50 square_shape2 bg-cover" style="background-image:url(images/background/bg6.jpg);">
+            <div class="section-full mobile-page-padding p-t80 p-b50 square_shape2 bg-cover" style="background-image:url(images/background/bg6.webp);">
                 <div class="container">
                     <div class="section-content">
 
@@ -1513,7 +1467,7 @@ excellence.</p>
                                 <div class="testimonial-2 m-a30 hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Ramesh Kumar -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    
@@ -1528,7 +1482,7 @@ excellence.</p>
                                 <div class="testimonial-2 m-a30  hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Priya Sharma -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    
@@ -1543,7 +1497,7 @@ excellence.</p>
                                 <div class="testimonial-2 m-a30  hover-animation-1">
                                     <div class=" block-shadow bg-white p-a30">
                                         <div class="testimonial-detail clearfix">
-                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.png" width="100" height="100" alt=""></div>
+                                            <div class="testimonial-pic radius shadow scale-in-center"><img src="images/user.webp" width="100" height="100" alt="" loading="lazy" decoding="async"></div>
                                             <h4 class="testimonial-name m-b5">Vikram Rao -</h4>
                                             <span class="testimonial-position">Customer</span>
                                         </div>                                    
@@ -1646,6 +1600,12 @@ excellence.</p>
             <span class="spin"></span>
           </div>
 
+          <!-- Spam trap: hidden from visitors; bots that fill it are ignored by form-submit.php -->
+          <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+            <label for="spec-vk-hp">Leave this field empty</label>
+            <input type="text" name="vk_hp" id="spec-vk-hp" tabindex="-1" autocomplete="off" value="">
+          </div>
+
           <div class="text-center pt-2">
             <button type="submit" class="site-button btn-effect btn btn-primary">
               Submit Now
@@ -1668,7 +1628,8 @@ excellence.</p>
     <?php include('append/footer.php'); ?>
 
    <script>
-$(document).ready(function () {
+// jQuery is deferred, so wait until it has run (DOMContentLoaded fires after deferred scripts).
+document.addEventListener('DOMContentLoaded', function () {
   $('#contactForm').on('submit', function (e) {
     e.preventDefault();
 
@@ -1875,7 +1836,7 @@ function setupScrollListener() {
         }
     }
     
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll, { passive: true, once: true });
 }
 </script>
 

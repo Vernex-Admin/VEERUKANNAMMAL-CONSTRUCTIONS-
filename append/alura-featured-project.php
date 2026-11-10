@@ -10,21 +10,21 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
         <div class="alura-feature-lead">
             <div class="alura-gallery" aria-label="Alura Apartments project images">
                 <figure class="alura-gallery-main">
-                    <a class="alura-image-open" href="images/projects/alura/alura-exterior.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments exterior rendering at full size in a new tab">
-                        <img src="images/projects/alura/alura-exterior.jpg" width="1141" height="676" alt="Exterior rendering of Alura Apartments" loading="eager" fetchpriority="high" decoding="async">
+                    <a class="alura-image-open" href="images/projects/alura/alura-exterior-client-photo.jpg" aria-label="Open the Alura Apartments exterior rendering at full size">
+                        <img src="images/projects/alura/alura-exterior-client-photo.jpg" width="720" height="720" alt="Exterior rendering of Alura Apartments" loading="eager" fetchpriority="high" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
                     <figcaption>Alura Apartments · exterior rendering</figcaption>
                 </figure>
                 <figure class="alura-gallery-inset">
-                    <a class="alura-image-open" href="images/projects/alura/alura-living-room.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments interior rendering at full size in a new tab">
+                    <a class="alura-image-open" href="images/projects/alura/alura-living-room.jpg" aria-label="Open the Alura Apartments interior rendering at full size">
                         <img src="images/projects/alura/alura-living-room.jpg" width="701" height="561" alt="Furnished living and dining interior rendering" loading="lazy" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
                     <figcaption>Interior view</figcaption>
                 </figure>
                 <figure class="alura-gallery-inset alura-gallery-kitchen">
-                    <a class="alura-image-open" href="images/projects/alura/alura-kitchen.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments kitchen rendering at full size in a new tab">
+                    <a class="alura-image-open" href="images/projects/alura/alura-kitchen.jpg" aria-label="Open the Alura Apartments kitchen rendering at full size">
                         <img src="images/projects/alura/alura-kitchen.jpg" width="701" height="561" alt="Alura Apartments kitchen rendering" loading="lazy" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
@@ -35,7 +35,12 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
             <div class="alura-project-intro">
                 <p class="alura-eyebrow"><span class="alura-status-dot" aria-hidden="true"></span> Ongoing project · Veeru Kannammal Construction</p>
                 <h2 id="alura-project-title-<?= $aluraIsProjectsPage ? 'projects' : 'home'; ?>">Alura Apartments</h2>
-                <p class="alura-location"><i class="fa fa-map-marker" aria-hidden="true"></i> Valasaravakkam, Chennai</p>
+                <p class="alura-location">
+                    <span class="alura-location-name"><i class="fa fa-map-marker" aria-hidden="true"></i> Valasaravakkam, Chennai</span>
+                    <a class="alura-location-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8" target="_blank" rel="noopener noreferrer" aria-label="View Alura Apartments site location on Google Maps">
+                        <i class="fa fa-map-o" aria-hidden="true"></i> View Site Location
+                    </a>
+                </p>
                 <p class="alura-address">Plot No. 14 &amp; 15, AKR Nagar, 4th Street, Valasaravakkam, Chennai – 600087</p>
                 <p class="alura-summary">A fully furnished 3 BHK apartment project, East/North facing and 100% Vasthu compliant.</p>
 
@@ -57,6 +62,10 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                     <button class="alura-button alura-button-secondary alura-button-brochure" type="button" data-alura-brochure-trigger aria-controls="alura-brochure-dialog-projects">
                         View Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                     </button>
+                    <?php else: ?>
+                    <a class="alura-button alura-button-primary alura-button-brochure-download" href="documents/alura-apartments-brochure-web.pdf" download="Alura-Apartments-Brochure.pdf" aria-label="Download the Alura Apartments project brochure as a PDF">
+                        Download Project Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    </a>
                     <?php endif; ?>
                 </div>
             </div>
@@ -101,6 +110,16 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
             </article>
         </div>
 
+        <!-- Site location: the pin from https://maps.app.goo.gl/Wm8tTh2PPknU915y8 (13.050271, 80.176777) -->
+        <div class="alura-map">
+            <div class="alura-map-frame">
+                <iframe title="Alura Apartments location" src="https://maps.google.com/maps?q=13.050271,80.176777&amp;z=17&amp;hl=en&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            </div>
+            <a class="alura-map-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8" target="_blank" rel="noopener noreferrer">
+                <i class="fa fa-external-link" aria-hidden="true"></i> Open in Google Maps
+            </a>
+        </div>
+
         <div class="alura-floorplan-card">
             <div class="alura-floorplan-copy">
                 <span class="alura-card-kicker">From the project brochure</span>
@@ -109,7 +128,7 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                 <p class="alura-plan-note">Dimensions shown are indicative; verify them against final drawings and site measurements.</p>
             </div>
             <figure class="alura-floorplan-image">
-                <a class="alura-image-open" href="images/projects/alura/alura-floor-plan.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments floor plan at full size in a new tab">
+                <a class="alura-image-open" href="images/projects/alura/alura-floor-plan.jpg" aria-label="Open the Alura Apartments floor plan at full size">
                     <img src="images/projects/alura/alura-floor-plan.jpg" width="1280" height="1264" alt="Alura Apartments third floor plan from the project brochure" loading="lazy" decoding="async">
                     <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full plan</span>
                 </a>
@@ -183,11 +202,11 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                     </button>
                 </header>
                 <div class="alura-brochure-viewer">
-                    <iframe title="Alura Apartments project brochure" data-src="documents/alura-apartments-brochure.pdf#view=FitH" loading="lazy"></iframe>
+                    <iframe title="Alura Apartments project brochure" data-src="documents/alura-apartments-brochure-web.pdf#view=FitH" loading="lazy"></iframe>
                 </div>
                 <footer class="alura-brochure-dialog-footer">
                     <p>View the brochure here or download a copy to your device.</p>
-                    <a class="alura-button alura-button-primary" href="documents/alura-apartments-brochure.pdf" download="Alura-Apartments-Brochure.pdf">
+                    <a class="alura-button alura-button-primary" href="documents/alura-apartments-brochure-web.pdf" download="Alura-Apartments-Brochure.pdf">
                         Download Brochure <i class="fa fa-download" aria-hidden="true"></i>
                     </a>
                 </footer>
