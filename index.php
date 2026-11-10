@@ -1646,6 +1646,12 @@ excellence.</p>
             <span class="spin"></span>
           </div>
 
+          <!-- Spam trap: hidden from visitors; bots that fill it are ignored by form-submit.php -->
+          <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+            <label for="spec-vk-hp">Leave this field empty</label>
+            <input type="text" name="vk_hp" id="spec-vk-hp" tabindex="-1" autocomplete="off" value="">
+          </div>
+
           <div class="text-center pt-2">
             <button type="submit" class="site-button btn-effect btn btn-primary">
               Submit Now

@@ -22,6 +22,17 @@
     Header always set X-XSS-Protection "1; mode=block"
 </IfModule>
 
+# Never serve secret/environment files, even if one is uploaded here by mistake
+<FilesMatch "^(env\.txt|\.env.*)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
 # Clean URLs - serve .php files for clean URLs
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-d

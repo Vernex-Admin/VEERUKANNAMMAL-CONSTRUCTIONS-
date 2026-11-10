@@ -263,6 +263,12 @@
                                                 </label>
                                             </div>
 
+                                            <!-- Spam trap: hidden from visitors; bots that fill it are ignored by form-submit.php -->
+                                            <div aria-hidden="true" style="position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;">
+                                                <label for="contact-vk-hp">Leave this field empty</label>
+                                                <input type="text" name="vk_hp" id="contact-vk-hp" tabindex="-1" autocomplete="off" value="">
+                                            </div>
+
                                             <div class="form-submit-wrapper">
                                                 <button name="submit" type="submit" value="Submit" class="modern-submit-btn" onclick="gtag('event', 'form_submit', { 'event_category': 'contact', 'event_label': 'contact_form' });">
                                                     <span class="btn-text">Send Message</span>

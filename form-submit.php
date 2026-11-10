@@ -3,15 +3,17 @@
 // CONFIGURATION
 // ======================================================
 require __DIR__ . '/vendor/autoload.php';
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
+// Never show PHP errors to visitors; log them instead.
+ini_set('display_errors', '0');
+ini_set('display_startup_errors', '0');
+ini_set('log_errors', '1');
 error_reporting(E_ALL);
 
 // ======================================================
 // LOAD ENVIRONMENT VARIABLES
 // ======================================================
 function loadEnv(string $filePath): void {
-    if (!file_exists($filePath)) return;
+    if (!is_readable($filePath)) return;
 
     foreach (file($filePath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES) as $line) {
         $line = trim($line);
@@ -21,14 +23,25 @@ function loadEnv(string $filePath): void {
         $name = trim($name);
         $value = trim($value);
 
-        if ($name && !isset($_ENV[$name])) {
+        // Real environment variables (e.g. set by the host) win over the file.
+        if ($name && getenv($name) === false && !isset($_ENV[$name])) {
             putenv("$name=$value");
             $_ENV[$name] = $_SERVER[$name] = $value;
         }
     }
 }
 
-loadEnv(__DIR__ . '/env.txt');
+// env.txt lives one level ABOVE the web root (next to public_html), so it can never be downloaded.
+loadEnv(dirname(__DIR__) . '/env.txt');
+
+// ======================================================
+// SPAM TRAP (honeypot)
+// ======================================================
+// The "vk_hp" field is hidden from people, so only bots fill it in.
+// Pretend it worked so the bot moves on, but send nothing.
+if (trim((string)($_POST['vk_hp'] ?? '')) !== '') {
+    jsonResponse(true, 'Thank you! Your message has been sent successfully.');
+}
 
 // ======================================================
 // HELPER FUNCTIONS
