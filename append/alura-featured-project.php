@@ -10,8 +10,8 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
         <div class="alura-feature-lead">
             <div class="alura-gallery" aria-label="Alura Apartments project images">
                 <figure class="alura-gallery-main">
-                    <a class="alura-image-open" href="images/projects/alura/alura-exterior.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments exterior rendering at full size in a new tab">
-                        <img src="images/projects/alura/alura-exterior.jpg" width="1141" height="676" alt="Exterior rendering of Alura Apartments" loading="eager" fetchpriority="high" decoding="async">
+                    <a class="alura-image-open" href="images/projects/alura/alura-exterior-client-photo.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open the Alura Apartments exterior rendering at full size in a new tab">
+                        <img src="images/projects/alura/alura-exterior-client-photo.jpg" width="720" height="720" alt="Exterior rendering of Alura Apartments" loading="eager" fetchpriority="high" decoding="async">
                         <span class="alura-image-open-label" aria-hidden="true"><i class="fa fa-search-plus"></i> View full image</span>
                     </a>
                     <figcaption>Alura Apartments · exterior rendering</figcaption>
@@ -35,7 +35,12 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
             <div class="alura-project-intro">
                 <p class="alura-eyebrow"><span class="alura-status-dot" aria-hidden="true"></span> Ongoing project · Veeru Kannammal Construction</p>
                 <h2 id="alura-project-title-<?= $aluraIsProjectsPage ? 'projects' : 'home'; ?>">Alura Apartments</h2>
-                <p class="alura-location"><i class="fa fa-map-marker" aria-hidden="true"></i> Valasaravakkam, Chennai</p>
+                <p class="alura-location">
+                    <span class="alura-location-name"><i class="fa fa-map-marker" aria-hidden="true"></i> Valasaravakkam, Chennai</span>
+                    <a class="alura-location-link" href="https://maps.app.goo.gl/Wm8tTh2PPknU915y8?g_st=aw" target="_blank" rel="noopener noreferrer" aria-label="View Alura Apartments site location on Google Maps">
+                        <i class="fa fa-map-o" aria-hidden="true"></i> View Site Location
+                    </a>
+                </p>
                 <p class="alura-address">Plot No. 14 &amp; 15, AKR Nagar, 4th Street, Valasaravakkam, Chennai – 600087</p>
                 <p class="alura-summary">A fully furnished 3 BHK apartment project, East/North facing and 100% Vasthu compliant.</p>
 
@@ -57,6 +62,10 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
                     <button class="alura-button alura-button-secondary alura-button-brochure" type="button" data-alura-brochure-trigger aria-controls="alura-brochure-dialog-projects">
                         View Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
                     </button>
+                    <?php else: ?>
+                    <a class="alura-button alura-button-primary alura-button-brochure-download" href="documents/alura-apartments-brochure.pdf" download="Alura-Apartments-Brochure.pdf" aria-label="Download the Alura Apartments project brochure as a PDF">
+                        Download Project Brochure <i class="fa fa-file-pdf-o" aria-hidden="true"></i>
+                    </a>
                     <?php endif; ?>
                 </div>
             </div>

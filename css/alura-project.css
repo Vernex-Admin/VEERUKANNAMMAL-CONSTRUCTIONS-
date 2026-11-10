@@ -87,8 +87,9 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 1.69 / 1;
-    object-fit: cover;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center;
     transition: transform 350ms cubic-bezier(.2, .65, .3, 1);
 }
 
@@ -187,15 +188,46 @@
 }
 
 .alura-location {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 14px;
     margin: 0 0 5px;
     color: #123d56;
     font-size: 16px;
     font-weight: 600;
 }
 
+.alura-location-name,
+.alura-location-link {
+    display: inline-flex;
+    align-items: center;
+}
+
 .alura-location i {
     margin-right: 6px;
     color: #b78843;
+}
+
+.alura-location-link {
+    color: #93682e;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 160ms ease;
+}
+
+.alura-location-link:hover,
+.alura-location-link:focus-visible {
+    color: #123d56;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.alura-location-link:focus-visible {
+    border-radius: 2px;
+    outline: 2px solid #c49a5b;
+    outline-offset: 3px;
 }
 
 .alura-address {
@@ -888,8 +920,19 @@
 }
 
 @media (max-width: 767px) {
-    .alura-feature-section {
-        padding: 132px 0 54px;
+    .section-full.alura-feature-section {
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        padding: 20px 0 54px !important;
+    }
+
+    .alura-feature-section > .container {
+        width: 100vw;
+        max-width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
     }
 
     .alura-feature-lead {
@@ -897,11 +940,13 @@
         align-items: stretch;
         flex-direction: column;
         gap: 24px;
+        min-width: 0;
     }
 
     .alura-gallery {
         order: 0;
         width: 100%;
+        min-width: 0;
         grid-template-columns: minmax(0, 1fr);
     }
 
@@ -910,8 +955,22 @@
     }
 
     .alura-gallery-main {
-        width: min(100%, 340px);
+        width: min(100%, 420px);
+        min-width: 0;
         margin-inline: auto;
+    }
+
+    .alura-gallery-main:hover img,
+    .alura-gallery-inset:hover img {
+        transform: none;
+    }
+
+    .alura-project-intro,
+    .alura-highlights,
+    .alura-actions {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
     }
 
     .alura-project-intro {
@@ -920,8 +979,21 @@
 
     .alura-eyebrow {
         align-items: flex-start;
+        flex-wrap: wrap;
+        max-width: 100%;
+        overflow-wrap: anywhere;
         font-size: 10px;
         letter-spacing: .08em;
+    }
+
+    .alura-location,
+    .alura-location-name,
+    .alura-location-link,
+    .alura-address,
+    .alura-summary {
+        min-width: 0;
+        max-width: 100%;
+        overflow-wrap: anywhere;
     }
 
     .alura-status-dot {
@@ -938,6 +1010,11 @@
 
     .alura-highlights {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .alura-highlight {
+        min-width: 0;
+        overflow-wrap: anywhere;
     }
 
     .alura-highlight:nth-child(3) {
@@ -1093,28 +1170,6 @@
 @media (max-width: 360px) {
     .alura-room-selector-options button {
         font-size: 10px;
-    }
-}
-
-@media (max-width: 767px) {
-    .alura-gallery-main > .alura-image-open {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 1141 / 676;
-    }
-
-    .alura-gallery-main > .alura-image-open > img {
-        width: 100%;
-        height: 100%;
-        max-height: none;
-        aspect-ratio: 1141 / 676;
-        object-fit: contain;
-        object-position: right top;
-    }
-
-    .alura-gallery-main:hover img,
-    .alura-gallery-inset:hover img {
-        transform: none;
     }
 }
 
