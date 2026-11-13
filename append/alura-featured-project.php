@@ -46,7 +46,7 @@ $aluraWalkthroughId = 'alura-walkthrough-dialog-' . ($aluraIsProjectsPage ? 'pro
 
                 <div class="alura-highlights" aria-label="Project highlights">
                     <div class="alura-highlight"><strong>3,773</strong><span>sq.ft. land area</span></div>
-                    <div class="alura-highlight"><strong>1,599</strong><span>sq.ft. saleable area</span></div>
+                    <div class="alura-highlight"><strong>1,650</strong><span>sq.ft. saleable area (incl. common area)</span></div>
                     <div class="alura-highlight"><strong>628.83</strong><span>sq.ft. UDS</span></div>
                     <div class="alura-highlight"><strong>3</strong><span>floors</span></div>
                 </div>
