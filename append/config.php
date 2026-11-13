@@ -4,9 +4,9 @@
  */
 
 // WhatsApp number used by every WhatsApp button and link on the site.
-// Country code + number, digits only. Currently 95000 44310 (India, +91).
+// Country code + number, digits only. Currently 93440 34068 (India, +91).
 if (!defined('VK_WHATSAPP_NUMBER')) {
-    define('VK_WHATSAPP_NUMBER', '919500044310');
+    define('VK_WHATSAPP_NUMBER', '919344034068');
 }
 
 if (!function_exists('vk_whatsapp_url')) {
